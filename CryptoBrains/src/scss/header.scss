@@ -1,0 +1,314 @@
+.header {
+	padding-top: rem(32);
+	padding-bottom: rem(32);
+	background-color: $bg-card-bg-2;
+	/* .header__container */
+	&__container {
+		display: flex;
+		align-items: center;
+	}
+	/* .header__logo */
+	&__logo {
+	}
+	/* .header__nav */
+	&__nav {
+		@include adaptiveValue("padding-left", 220, 60, 0, 1500, 1260);
+		flex: 1 1 auto;
+	}
+	/* .header__btns */
+	&__btns {
+	}
+}
+.nav-header {
+
+	/* .nav-header__list */
+	&__list {
+		display: flex;
+		align-items: center;
+		@media (max-width:$tablet){
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	/* .nav-header__item */
+	&__item {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 30, 16, 0, 1500, 991);
+		}
+		@media (max-width:$tablet){
+			width: 100%;
+			&:not(:last-child) {
+				margin: 0;
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	/* .nav-header__spollers */
+	&__spollers {
+	}
+	/* .nav-header__link */
+	&__link {
+		position: relative;
+		padding: 8px 0;
+		@include adaptiveValue("padding-left", 18, 12, 0, 1500, 991);		
+		@include adaptiveValue("padding-right", 18, 12, 0, 1500, 991);
+		line-height: math.div(24, 18);
+		&::after{
+			content:'';
+			position: absolute;
+			width: 0;
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: #fff;
+			transition: all 0.5s ease 0s;
+		}
+		@media (max-width:$tablet){
+			padding: 0;
+			@include adaptiveValue("font-size", 32, 16, 0, 860, 480);
+		}
+		@media (any-hover: hover){
+			&:hover{
+				&::after{
+					content:'';
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.spollers-header {
+	position: relative;
+	/* .spollers-header__title */
+	&__title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 8px 0;
+		@include adaptiveValue("padding-left", 18, 12, 0, 1500, 991);		
+		@include adaptiveValue("padding-right", 18, 12, 0, 1500, 991);		
+		line-height: math.div(24, 18);
+		@media (max-width:$tablet){
+			width: 100%;
+			padding: 0;
+			justify-content: space-between;
+			@include adaptiveValue("font-size", 32, 16, 0, 860, 480);
+		}
+		span {
+			margin-left: 12px;
+			color: #fff;
+			font-size: 7px;
+			transition: transform 0.5s ease 0s;
+		}
+		&._spoller-active {
+			span {
+				transform: rotate(180deg);
+			}			
+		}
+		&::after{
+			content:'';
+			position: absolute;
+			width: 0;
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: #fff;
+			transition: all 0.5s ease 0s;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				&::after{
+					content:'';
+					width: 100%;
+				}
+			}
+		}
+	}
+	/* .spollers-header__body */
+	&__body {
+		margin-top: 12px;
+		@media (min-width:$tablet){
+			position: absolute;
+			width: 100%;
+			margin-top: 6px;
+			text-align: center;
+			border: 1px solid $greyTextColor;
+			border-top: none;
+			border-radius: 0 0 10px 10px;
+			padding-bottom: 10px;
+			z-index: 2;
+			top: 100%;
+			left: 0;
+		}
+	}
+	/* .spollers-header__link */
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+	/* .spollers-header__link */
+	&__link {
+		@media (any-hover: hover){
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.btns-header {
+	display: flex;
+	align-items: center;
+	/* .btns-header__btn */
+	&__btn {
+		position: relative;
+		overflow-x: hidden; 
+		@include adaptiveValue("padding-top", 14, 12, 0, 1500, 991);
+		@include adaptiveValue("padding-bottom", 14, 12, 0, 1500, 991);
+		@include adaptiveValue("padding-left", 47, 18, 0, 1500, 991);
+		@include adaptiveValue("padding-right", 47, 18, 0, 1500, 991);
+		font-weight: 400;
+		@include adaptiveValue("font-size", 20, 14);
+		line-height: math.div(32, 20);
+		border-radius: 4px;
+		transition: all 0.5s ease 0s;
+		& .flare {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 45px;
+			transform: skewX(-45deg);
+			animation: flareAnimation;
+			left: -150%;
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+			animation: flareAnimation 3s infinite linear;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				background-color: $paleGreenColor;
+			}
+		}
+		@media (max-width:$tablet){
+			display: none;
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 10, 15, 0, 1024, 991);
+		}
+		&.btn-primary {
+			margin: 0;
+			@media (max-width:$tablet){
+				display: block;
+				background-color: inherit;
+			}
+			@media (any-hover: hover){
+				&:hover{
+					& .flare {
+						animation: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+//====================================================================================================
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+//====================================================================================================
+.menu {
+
+	/* .menu__icon */
+	&__icon {
+	}
+	/* .menu__body */
+	&__body {
+		@media (max-width: $tablet) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			right: -100%;
+			overflow: auto;
+			padding: rem(100) rem(15) rem(50) rem(15);
+			z-index: 100;
+			background-color: #404040;
+			transition: right .3s ease 0s;
+			&::before {
+				content: '';
+				position: fixed;
+				width: 100%;
+				height: 100px;
+				right: -100%;
+				top: 0;
+				z-index: 2;
+				transition: right .3s ease 0s;
+				// background-color: $mainDarkColor;
+				background-color: #404040;	
+			}
+			.menu-open & {
+				right: 0;
+				&::before {
+					right: 0;
+				}
+			}
+		}	
+	}
+	@media (max-width: $tablet) {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+//Burger
+.icon-menu {
+	// display: none;
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(30);
+		z-index: 101;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span {
+			display: none;
+			transition: all 0.5s ease 0s;
+		}
+		// span,
+		// &::before,
+		// &::after {
+		// 	content: "";
+		// 	transition: all 0.3s ease 0s;
+		// 	right: 0;
+		// 	position: absolute;
+		// 	width: 100%;
+		// 	height: rem(2);
+		// 	background-color: $mainColor;
+		// }
+		// &::before {
+		// 	top: 0;
+		// }
+		// &::after {
+		// 	bottom: 0;
+		// }
+		// span {
+		// 	top: calc(50% - rem(1));
+		// }
+		.menu-open & {
+			svg {
+				display: none;
+			}
+			span,
+			span svg {
+				display: block;
+			}
+		}
+	}
+}

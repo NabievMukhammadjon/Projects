@@ -1,0 +1,137 @@
+.page-market {
+    background-color: $bg-main-bg-1;
+    /* .page-market__cards */
+    &__cards {
+        @include adaptiveValue("padding-top", 90, 0);
+        @include adaptiveValue("padding-bottom", 60, 10);
+        @include adaptiveValue("margin-bottom", 60, 10);
+    }
+    /* .page-market__exchange */
+    &__exchange {
+    }
+}
+.body-market {
+    
+    &__container {
+        position: relative;
+        @media (min-width:$tablet){  
+            &::after {
+                content:'';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            left: 0;
+            @include adaptiveValue("bottom", -60, -30);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 48.42%, rgba(255, 255, 255, 0.1) 100%);
+            }
+        }
+    }
+    /* .body-market__title */
+    &__title {
+    }
+}
+//========================================================================================================================================================
+.exchange-rate {
+    // background-color: #181B22;
+    /* .exchange-rate__container */
+    &__container {
+    }
+    /* .exchange-rate__filter */
+    &__filter {
+    }
+    /* .exchange-rate__body */
+    &__body {
+    }
+    /* .exchange-rate__btns */
+    &__btns {
+    }
+}
+.filter-exchange-rate {
+    display: flex;
+    gap: 20px;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $bg-card-bg-2;
+    border-radius: 4px;
+    &:not(:last-child) {
+        margin-bottom: rem(60);
+    }
+    /* .filter-exchange-rate__nav */
+    &__nav {
+    }
+    /* .filter-exchange-rate__list */
+    &__list {
+        display: flex;
+        gap: 34px;
+        align-items: center;
+    }
+    /* .filter-exchange-rate__item */
+    &__item {
+    }
+    /* .filter-exchange-rate__btn */
+    &__btn {
+        color: $greyTextColor;
+        font-size: rem(20);
+        line-height: math.div(32, 20);
+        transition: all 0.5s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: $mainColor;
+            }
+        }
+    }
+    /* .filter-exchange-rate__search */
+    &__search {
+    }
+    /* .filter-exchange-rate__label */
+    &__label {
+    }
+    /* .filter-exchange-rate__input */
+    &__input {
+        padding: 14px 20px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        outline: none;
+        background-color: transparent;
+        color: $grey-4;
+        font-size: rem(16);
+        line-height: math.div(24, 16);
+    }
+}
+.body-exchange-rate {
+    &:not(:last-child) {
+        margin-bottom: rem(60);
+    }
+    /* .body-exchange-rate__table */
+    &__table {
+        &>:not(caption)>*>* {
+            color: #fff;
+            background-color: $bg-main-bg-1;
+        }
+    }
+}
+.table-exchange-rate {
+
+    /* .table-exchange-rate__head */
+    &__head {
+    }
+    /* .table-exchange-rate__body */
+    &__body {
+    }
+}
+.btns-exchange-rate {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: rem(120);
+    /* .btns-exchange-rate__button */
+    &__button {
+        display: flex;
+        padding: 19px 81px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+    }
+}

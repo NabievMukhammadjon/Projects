@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Карточка товара"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_inner">
+                <div class="page__header">
+                    <div class="page__container">
+                        <nav class="page__breadcrumbs breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a href="" class="breadcrumbs__link">Разделочные ножи</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__current">Нож Патриот</span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__container">
+                        <div class="product__main main-product">
+                            <div class="main-product__images images-product">
+                                <div class="images-product__slider">
+                                    <div class="images-product__swiper">
+                                        <div class="images-product__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-01.webp" alt="Картинка">
+                                        </div>
+                                        <div class="images-product__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-02.webp" alt="Картинка">
+                                        </div>
+                                        <div class="images-product__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-03.webp" alt="Картинка">
+                                        </div>
+                                        <div class="images-product__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-04.webp" alt="Картинка">
+                                        </div>
+                                        <div class="images-product__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-05.webp" alt="Картинка">
+                                        </div>
+                                        <div class="images-product__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-06.webp" alt="Картинка">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="images-product__thumbs thumbs-images">
+                                    <div class="thumbs-images__swiper">
+                                        <div class="thumbs-images__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-01.webp" alt="Картинка">
+                                        </div>
+                                        <div class="thumbs-images__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-02.webp" alt="Картинка">
+                                        </div>
+                                        <div class="thumbs-images__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-03.webp" alt="Картинка">
+                                        </div>
+                                        <div class="thumbs-images__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-04.webp" alt="Картинка">
+                                        </div>
+                                        <div class="thumbs-images__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-05.webp" alt="Картинка">
+                                        </div>
+                                        <div class="thumbs-images__slide-ibg">
+                                            <img src="@img/phoduct/nozh-patriot-06.webp" alt="Картинка">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-product__body body-product">
+                                <div class="body-product__header header-product">
+                                    <div class="header-product__line">
+                                        <h1 class="header-product__title">Нож Патриот</h1>
+                                        <a href="" class="header-product__link _icon-compare"></a>
+                                        <a href="" class="header-product__link _icon-favorite"></a>
+                                    </div>
+                                    <div class="header-product__rating rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div hide class="rating__value">4.7</div>
+                                    </div>
+                                </div>
+                                <div class="body-product__table table-product">
+                                    <div class="table-product__label">Артикул:</div>
+                                    <div class="table-product__value">air-0390</div>
+                                    <div class="table-product__label">Торговая марка::</div>
+                                    <div class="table-product__value">WUESTHOF (Германия)</div>
+                                    <div class="table-product__label">Серия:</div>
+                                    <div class="table-product__value">Ножи серии Classic Ikon</div>
+                                    <div class="table-product__label">Бонусные баллы:</div>
+                                    <div class="table-product__value">39</div>
+                                </div>
+                                <div class="body-product__options options-product">
+                                    <div class="options-product__label">Сталь</div>
+                                    <div class="options-product__value">
+                                        <select name="form[]" placeholder="Выберите сталь" class="form">
+                                            <option value disabled selected>Выберите сталь</option>
+                                            <option value="1">95Х18 (-300 ₽)</option>
+                                            <option value="2">100Х13М</option>
+                                            <option value="3">Дамаск ZDI-1016 (+5 500 ₽)</option>
+                                            <option value="4">Дамаск (+2 700 ₽)</option>
+                                        </select>
+                                    </div>
+                                    <div class="options-product__label">Рукоять</div>
+                                    <div class="options-product__value">
+                                        <select name="form[]" placeholder="Выберите сталь" class="form">
+                                            <option value disabled selected>Выберите рукоять</option>
+                                            <option value="1">Орех (-100 ₽)</option>
+                                            <option value="2">Берёзовый кап (+500 ₽)</option>
+                                            <option value="3">Орех + полимерное покрытие</option>
+                                            <option value="4">Карельская берёза (+100 ₽)</option>
+                                            <option value="5">Наборная кожа (-200 ₽)</option>
+                                            <option value="6 ">Наборная береста (-200 ₽)</option>
+                                        </select>
+                                    </div>
+                                    <div class="options-product__label">Гарда и тыльник</div>
+                                    <div class="options-product__value">
+                                        <select name="form[]" placeholder="Выберите сталь" class="form">
+                                            <option value disabled selected>Выбрать гарда и тыльник</option>
+                                            <option value="1">Латунь (+1 600 ₽)</option>
+                                            <option value="2">Текстолит (-350 ₽)</option>
+                                            <option value="3">Алюминий</option>
+                                            <option value="4">Металлический</option>
+                                        </select>
+                                    </div>
+                                    <div class="options-product__label">Обработка клинка</div>
+                                    <div class="options-product__value">
+                                        <select name="form[]" placeholder="Выберите сталь" class="form">
+                                            <option value disabled selected>Выбрать обработку клинка</option>
+                                            <option value="1">Без дополнительной обработки</option>
+                                            <option value="2">Пескоструйная обработка Sandwave (+200 ₽)</option>
+                                            <option value="3">Обработка клинка Stonewash (+300 ₽)</option>
+                                            <option value="4">Золочение клинка (+1 700 ₽)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="body-product__actions actions-product">
+                                    <div class="actions-product__info">
+                                        <div class="actions-product__price">3 865</div>
+                                        <div class="actions-product__sale">
+                                            + 449 баллов за покупку
+                                            <span data-tippy-content="Бонус">?</span>
+                                        </div>
+                                    </div>
+                                    <div class="actions-product__row">
+                                        <div data-quantity class="actions-product__quantity quantity">
+                                            <button data-quantity-plus  type="button" class="quantity__button quantity__button_plus"></button>
+                                            <div class="quantity__input">
+                                                <input data-quantity-value type="text" autocomplete="off" name="form[]" value="1">
+                                            </div>
+                                            <button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+                                        </div>
+                                        <div class="actions-product__buttons">
+                                            <a href="" class="actions-product__cart button"><span class="_icon-cart">В корзину</span></a>
+                                            <a href="" class="actions-product__button button button_black">Купить в 1 клик</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-tabs="992" class="product__info product-info">
+                            <nav data-tabs-titles class="product-info__navigation">
+                                <button type="submit" class="product-info__title _tab-active">Описание</button>
+                                <button type="submit" class="product-info__title">Характеристика</button>
+                                <button type="submit" class="product-info__title">Отзывы</button>
+                                <button type="submit" class="product-info__title">Доставка</button>
+                            </nav>
+                            <div data-tabs-body class="product-info__content">
+                                <div class="product-info__body">
+                                    Легкий удобный нож с&nbsp;клинком, имеющим пологие вогнутые линзовидные спуски на&nbsp;две трети ширины клинка, образующие тонкое, 
+                                    прекрасно режущее лезвие толщиной около 0,6&nbsp;мм в&nbsp;районе подводов. 
+                                    <br>
+                                    <br>
+                                    Обух клинка со&nbsp;спинкой рукояти имеет одну плавную дугообразную линию. На&nbsp;пяте перед рукоятью есть подпальцевый вырез для точных работ. 
+                                    <br>
+                                    <br>
+                                    Необходимо проявлять некоторую осторожность при работе с&nbsp;большими боковыми нагрузками на&nbsp;лезвие ножа, ввиду небольшой толщины клинка 
+                                    в&nbsp;рабочей части. 
+                                    <br>
+                                    <br>
+                                    Монтаж рукояти накладной плашечный. На&nbsp;навершии рукояти, функцию которого выполняет выступающий из&nbsp;под плашек хвостовик, 
+                                    имеется отверстие под темляк. Этот нож удобный помощник при работе с&nbsp;продуктами и&nbsp;охоте на&nbsp;боровую и&nbsp;водоплавающую дичь.
+                                </div>
+                                <div class="product-info__body characteristics-info">
+                                    <div class="characteristics-info__block">
+                                        <div class="characteristics-info__item">
+                                            <div class="characteristics-info__title">Технические характеристики</div>
+                                            <ul class="characteristics-info__list list-characteristics">
+                                                <li class="list-characteristics__item">
+                                                    <div class="list-characteristics__label">Общая длина, мм:</div>
+                                                    <div class="list-characteristics__value">227</div>
+                                                </li>
+                                                <li class="list-characteristics__item">
+                                                    <div class="list-characteristics__label">Длина клинка, мм:</div>
+                                                    <div class="list-characteristics__value">112</div>
+                                                </li>
+                                                <li class="list-characteristics__item">
+                                                    <div class="list-characteristics__label">Ширина клинка, мм:</div>
+                                                    <div class="list-characteristics__value">24</div>
+                                                </li>
+                                                <li class="list-characteristics__item">
+                                                    <div class="list-characteristics__label">Толщина обуха, мм:</div>
+                                                    <div class="list-characteristics__value">2.9</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="characteristics-info__item">
+                                            <div class="characteristics-info__title">Используемые материалы</div>
+                                            <ul class="characteristics-info__list list-characteristics">
+                                                <li class="list-characteristics__item">
+                                                    <div class="list-characteristics__label list-characteristics__label_2">Сталь:</div>
+                                                    <div class="list-characteristics__value">95Х18</div>
+                                                </li>
+                                                <li class="list-characteristics__item">
+                                                    <div class="list-characteristics__label list-characteristics__label_2">Рукоять:</div>
+                                                    <div class="list-characteristics__value">Накладки карельская береза</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="characteristics-info__item">
+                                            <div class="characteristics-info__title">Производство</div>
+                                            <ul class="characteristics-info__list list-characteristics">
+                                                <li class="list-characteristics__item">
+                                                    <div class="list-characteristics__label list-characteristics__label_3">Производство:</div>
+                                                    <div class="list-characteristics__value">АиР</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-info__body options-clients">
+                                    <div class="options-clients__item item-options-clients">
+                                        <div class="item-options-clients__image">
+                                            <img src="@img/phoduct/options/Камила-Светлова.jpg" alt="Фотография Клиента">
+                                        </div>
+                                        <div class="item-options-clients__block">
+                                            <div class="item-options-clients__top">
+                                                <div class="item-options-clients__name">Камила Светлова</div>
+                                                <div class="item-options-clients__date">20.06.2019</div>
+                                            </div>
+                                            <div class="item-options-clients__rating rating">
+                                                <div class="rating__body">
+                                                    <div class="rating__active" style="width: 100%;"></div>
+                                                </div>
+                                                <div class="rating__value">5</div>
+                                            </div>                                                      
+                                            <p class="item-options-clients__descr">
+                                                Красивый и&nbsp;стильный. Качественный клинок. Накладки из&nbsp;ореха прилигают к&nbsp;рукояти плотно, без зазоров. Заточка хорошая.
+                                                Очень жаль, что на&nbsp;изделие нет гарантийного срока. Как оказалась реклама и&nbsp;реальность&nbsp;&mdash; две разные вещи. На&nbsp;свой вопрос касательно гарантийного срока мне подтвердили, что на&nbsp;нож гарантии не&nbsp;даются. 
+                                                Повезёт- проблем не&nbsp;будет. Не&nbsp;повезёт&nbsp;&mdash; немалую сумму покупатель спускает в&nbsp;унитаз.
+                                            </p>
+                                            <div class="item-options-clients__btns">
+                                                <button type="button" class="item-options-clients__button options-btn-animate">Ответить</button>
+                                                <button class="item-options-clients__favorite _icon-favorite"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="options-clients__item item-options-clients">
+                                        <div class="item-options-clients__image">
+                                            <img src="@img/phoduct/options/Никита-Казаков.jpg" alt="Фотография Клиента">
+                                        </div>
+                                        <div class="item-options-clients__block">
+                                            <div class="item-options-clients__top">
+                                                <div class="item-options-clients__name">Никита Казаков</div>
+                                                <div class="item-options-clients__date">29.06.2019</div>
+                                            </div>
+                                            <div class="item-options-clients__rating rating">
+                                                <div class="rating__body">
+                                                    <div class="rating__active" style="width: 100%;"></div>
+                                                </div>
+                                                <div class="rating__value">5</div>
+                                            </div>                                                      
+                                            <p class="item-options-clients__descr">
+                                                Нож просто классный.&nbsp;да&nbsp;и&nbsp;не&nbsp;только классный вся его красота сочетается
+                                                именно с&nbsp;накладками из&nbsp;граба. Смотрится очень красиво. Не&nbsp;знаю как у&nbsp;других, 
+                                                но&nbsp;мне всегда попадаются ножи с&nbsp;хорошей заточкой. Или мастер такой (мастера такие) 
+                                                но&nbsp;проблем с&nbsp;заточкой ножей не&nbsp;возникало (это не&nbsp;первый нож от&nbsp;Златмакса)
+                                            </p>
+                                            <div class="item-options-clients__btns">
+                                                <button type="button" class="item-options-clients__button options-btn-animate">Ответить</button>
+                                                <button class="item-options-clients__favorite _icon-favorite"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-info__body dilevery-info">
+                                    <div class="dilevery-info__inner">
+                                        <div class="dilevery-info__label">Ваша страна</div>
+                                        <div class="dilevery-info__value">
+                                            <select name="form[]" placeholder="Россия" class="form">
+                                                <option value="1" selected>Россия</option>
+                                                <option value="2">Казахстан</option>
+                                                <option value="3">Узбекисатан</option>
+                                                <option value="4">Китай</option>
+                                                <option value="5">Латва</option>
+                                            </select>
+                                        </div>
+                                        <div class="dilevery-info__label">Ваш город</div>
+                                        <div class="dilevery-info__value">
+                                            <select name="form[]" placeholder="Москва" class="form">
+                                                <option value="1" selected>Москва</option>
+                                                <option value="2">Астана</option>
+                                                <option value="3">Ташкент</option>
+                                                <option value="4">Шанхай</option>
+                                                <option value="5">Вельнюс</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

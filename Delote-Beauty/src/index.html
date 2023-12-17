@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Delote-Beauty"
+	})
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<section data-fullscreen class="page__hero hero">
+					@@include('html/_header.htm',{})
+					<div class="hero__container">
+						<div class="hero__content">
+							<h1 data-aos="fade-up" data-aos-delay="100" class="hero__title">
+								Салон красоты &laquo;Delote-Beauty&raquo; на&nbsp;Крестовском
+							</h1>
+							<button data-aos="fade-up" data-aos-delay="150" data-aos-offset="70" data-goto-header data-goto-top="230" data-goto="#services" class="hero__btn button _icon-mouse"><span>Прокрутите вниз</span></button>
+						</div>
+					</div>
+				</section>
+				<section id="info" class="page__info info">
+					<div class="info__container">
+						<div class="info__content _icon-quotes">
+							<p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" class="info__descr">
+							    Delote-Beauty&nbsp;&mdash; это бьюти-проект,
+								в&nbsp;основе которого лежит любовь к&nbsp;женской природе
+								и&nbsp;естественной красоте. Все наши мастера исповедуют идею о&nbsp;том, что нет ничего лучше вас самих и&nbsp;задача настоящего мастера подчеркнуть ваши качества, не&nbsp;создавая конфликта внутреннего и&nbsp;внешнего содержания. Сила в&nbsp;гармонии.
+							</p>
+						</div>
+					</div>
+				</section>	
+				<section data-watch="navigator" id="services" class="page__services services">
+					<div class="services__container">
+						<div class="services__block block-services">
+							<div class="block-services__items">
+								<a data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" href="services.html" class="block-services__item">
+									<div class="block-services__image">
+										<span class="block-services__image-ibg">
+											<img src="@img/services/01_Parihmaher.jpg" alt="Картинка">
+										</span>
+									</div>
+									<div class="block-services__title">Парикмахерские услуги</div>
+								</a>
+								<a data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" href="services.html" class="block-services__item">
+									<div class="block-services__image">
+										<span class="block-services__image-ibg">
+											<img src="@img/services/02_Manikur.jpg" alt="Картинка">
+										</span>
+									</div>
+									<div class="block-services__title">Маникюр</div>
+								</a>
+								<a data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" href="services.html" class="block-services__item">
+									<div class="block-services__image">
+										<span class="block-services__image-ibg">
+											<img src="@img/services/03_Pedikur.jpg" alt="Картинка">
+										</span>
+									</div>
+									<div class="block-services__title">Педикюр</div>
+								</a>
+								<a data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" href="services.html" class="block-services__item">
+									<div class="block-services__image">
+										<span class="block-services__image-ibg">
+											<img src="@img/services/04_Kosmetologiya.jpg" alt="Картинка">
+										</span>
+									</div>
+									<div class="block-services__title">Косметология</div>
+								</a>
+								<a data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" href="services.html" class="block-services__item">
+									<div class="block-services__image">
+										<span class="block-services__image-ibg">
+											<img src="@img/services/05_Estetist.jpg" alt="Картинка">
+										</span>
+									</div>
+									<div class="block-services__title">Эстетист по телу</div>
+								</a>
+								<a data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" href="services.html" class="block-services__item">
+									<div class="block-services__image">
+										<span class="block-services__image-ibg">
+											<img src="@img/services/06_Vizaj.jpg" alt="Картинка">
+										</span>
+									</div>
+									<div class="block-services__title">Визаж</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__partners partners">
+					<div class="partners__container">
+						<div class="partners__block">
+							<a data-aos="zoom-in-up" data-aos-delay="100" href="https://kevinmurphy.com.au/" target="_blank" class="partners__item">
+								<img src="@img/brends/kavin.png" alt="Логотип">
+							</a>
+							<a data-aos="zoom-in-up" data-aos-delay="100" href="https://www.oribe.com/" target="_blank" class="partners__item">
+								<img src="@img/brends/oribe.png" alt="Логотип">
+							</a>
+							<a data-aos="zoom-in-up" data-aos-delay="100" href="https://alterna-shop.ru/" target="_blank" class="partners__item">
+								<img src="@img/brends/alterna.png" alt="Логотип">
+							</a>
+							<a data-aos="zoom-in-up" data-aos-delay="100" href="https://aldocoppola.ru/	" target="_blank" class="partners__item">
+								<img src="@img/brends/aldoCopla.png" alt="Логотип">
+							</a>
+						</div>
+					</div>
+				</section>
+				<section id="masters" data-watch="navigator" class="page__masters masters">
+					@@include('html/_masters.htm', {
+						"title":"Наши мастера"
+					})
+				</section>
+				<section class="page__empty empty"></section>
+				<section class="page__works works">
+					<div class="works__container">
+						<div class="works__content">
+							<h2 data-aos="zoom-in-up" data-aos-delay="100" class="works__title">Наши работы</h2>
+							<div class="works__inner inner-works">
+								<div data-tabs class="inner-works__tabs">
+									<nav data-tabs-titles class="inner-works__nav">
+										<button data-aos="fade-up" data-aos-delay="100" type="submit" class="inner-works__title _tab-active"><span>Парикмахерские услуги</span></button>
+										<button data-aos="fade-up" data-aos-delay="100" type="submit" class="inner-works__title"><span>Набор</span></button>
+										<button data-aos="fade-up" data-aos-delay="100" type="submit" class="inner-works__title"><span>Ногтевой сервис</span></button>
+										<button data-aos="fade-up" data-aos-delay="100" type="submit" class="inner-works__title"><span>Визаж</span></button>
+									</nav>
+									<div data-tabs-body class="inner-works__content">	
+										<div class="inner-works__body">
+											<div data-gallery class="inner-works__block gallery">
+												<a data-aos="fade-up" data-aos-delay="200" href="@img/works/work-hair_01.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-hair_01.jpg" alt="Парикмахерские услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="200" href="@img/works/all_02.jpeg" class="inner-works__image-ibg">
+													<img src="@img/works/all_02.jpeg" alt="Услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="200" href="@img/works/work-hair_05.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-hair_05.jpg" alt="Парикмахерские услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="200" href="@img/works/work-hair_08.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-hair_08.jpg" alt="Парикмахерские услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="200" href="@img/works/work-hair_03.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-hair_03.jpg" alt="Парикмахерские услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="200" href="@img/works/work-hair_09_big.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-hair_09.jpg" alt="Парикмахерские услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="200" href="@img/works/work-hair_04.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-hair_04.jpg" alt="Парикмахерские услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="200" href="@img/works/work-hair_011_big.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-hair_011.jpg" alt="Услуги">	
+												</a>													
+												<a data-aos="fade-up" data-aos-delay="200" href="@img/works/all_011.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/all_011.jpg" alt="Парикмахерские услуги">	
+												</a>
+											</div>
+										</div>
+										<div class="inner-works__body">
+											<div data-gallery class="inner-works__block gallery">
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/all_01.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/all_01.jpg" alt="Услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-hair_07.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-hair_07.jpg" alt="Парикмахерские услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/all_012_big.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/all_012.jpg" alt="Услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/all_04.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/all_04.jpg" alt="Услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/all_010.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/all_010.jpg" alt="Парикмахерские услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/all_06.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/all_06.jpg" alt="Услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-hair_010_big.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-hair_010.jpg" alt="Услуги">	
+												</a>								
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/all_08.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/all_08.jpg" alt="Услуги">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/all_09.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/all_09.jpg" alt="Услуги">	
+												</a>
+											</div>
+										</div>
+										<div class="inner-works__body">
+											<div data-gallery class="inner-works__block gallery">
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-nails_01_big.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-nails_01.jpg" alt="Маникюр">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-nails_02.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-nails_02.jpg" alt="Маникюр">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-nails_03.jpeg" class="inner-works__image-ibg">
+													<img src="@img/works/work-nails_03.jpeg" alt="Маникюр">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-nails_04.jpeg" class="inner-works__image-ibg">
+													<img src="@img/works/work-nails_04.jpeg" alt="Маникюр">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-nails_05.jpeg" class="inner-works__image-ibg">
+													<img src="@img/works/work-nails_05.jpeg" alt="Маникюр">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-nails_06.jpeg" class="inner-works__image-ibg">
+													<img src="@img/works/work-nails_06.jpeg" alt="Маникюр">	
+												</a>
+											</div>
+										</div>
+										<div class="inner-works__body">
+											<div data-gallery class="inner-works__block gallery">
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-vizaj_01_big.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-vizaj_01.jpg" alt="Визаж">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-vizaj_02_big.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-vizaj_02.jpg" alt="Визаж">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-vizaj_03_big.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-vizaj_03.jpg" alt="Визаж">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-vizaj_04.jpeg" class="inner-works__image-ibg">
+													<img src="@img/works/work-vizaj_04.jpeg" alt="Визаж">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-vizaj_05.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-vizaj_05.jpg" alt="Визаж">	
+												</a>
+												<a data-aos="fade-up" data-aos-delay="100" href="@img/works/work-vizaj_06.jpg" class="inner-works__image-ibg">
+													<img src="@img/works/work-vizaj_06.jpg" alt="Визаж">	
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-aos="zoom-in" data-aos-delay="100" class="page__map map">
+					<div class="map__container">
+						<div class="map__content">
+							<div id="map" class="map__block"></div>
+							<div class="map__shape tn-elem"></div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

@@ -1,0 +1,130 @@
+//====================================================================================================
+.footer {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    background-color: #000;
+    /* .footer__container */
+    &__container {
+    }
+    /* .footer__content */
+    &__content {
+        display: flex;
+        @media (max-width: rem(1280)){
+            margin-bottom: rem(36);
+        }
+        @media (max-width: rem(1040)){
+            flex-wrap: wrap;
+        }
+        @media (max-width:$mobile){
+             justify-content: center; 
+        }
+        @include adaptiveValue("gap", 84, 45, 1860, 1440);
+    }
+    /* .footer__info */
+    &__info {
+    }
+    /* .footer__links */
+    &__links {
+    }
+    /* .footer__socials */
+    &__socials {
+    }
+    /* .footer__dop */
+    &__dop {
+        
+    }
+}
+.info-footer {
+
+    /* .info-footer__logo */
+    &__logo {
+        display: block;
+        font-size: rem(32);
+        color: #fff;
+        @media (min-width:$mobile){
+            margin-bottom: rem(40);
+        }
+        transition: color 0.3s ease 0s;
+        cursor: pointer;
+        @media (any-hover: hover){
+            &:hover{
+                color: $mainBananaColor;
+            }
+            &:focus-visible {
+                color: $mainGreyTextColor;
+                
+            }
+        }
+    }
+    /* .info-footer__text */
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        font-family: TTNorms, "PT Mono", sans-serif;
+        line-height: math.div(28, 18);
+        color: #fff;
+        @media (max-width:$mobile){
+             display: none; 
+        }
+    }
+}
+.links-footer {
+    flex: 0 0 rem(300);
+    @media (max-width:$mobile){
+         display: none; 
+    }
+    /* .links-footer__item */
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(8);
+        }
+    }
+    /* .links-footer__link */
+    &__link {
+        text-decoration: underline;
+        line-height: math.div(28, 18);
+        color: #fff;
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: $mainBananaColor;
+            }
+            &:focus-visible {
+                color: $mainGreyTextColor;
+            }
+        }
+    }
+}
+.socials-footer {
+    display: flex;
+    gap: rem(18);
+    /* .socials-footer__item */
+    &__item {
+        @include adaptiveValue("width", 52, 40);
+        @include adaptiveValue("height", 52, 40);
+    }
+    /* .socials-footer__link */
+    &__link {
+        display: flex;
+        height: 100%;
+        justify-content:center;
+        align-items: center;
+        font-size: rem(22);
+        background-color: #D8D8D8;
+        @include adaptiveValue("border-radius", 20, 8);
+        transition: background-color 0.3s ease 0s;
+        cursor: pointer;
+        @media (any-hover: hover){
+            &:hover{
+                background-color: $mainBananaColor;
+            }
+            &:focus-visible {
+                background-color: $mainGreyTextColor;
+            }
+        }
+    }
+}
+
+
+
+//====================================================================================================

@@ -1,0 +1,795 @@
+//====================================================================================================
+
+.header {
+	&__top {
+		
+	}
+	&__body {
+	}
+	&__catalog {
+	}
+
+}
+.top-header {
+	padding: rem(10) 0;
+	color: #fff;
+	background-color: $mainDarkColor;
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+		min-height: rem(50);
+		@media (max-width: $tablet) {
+			gap: rem(30);
+		}
+	}
+	&__menu {
+		flex: 1 1 auto;
+	}
+	&__user {
+		position: relative;
+		z-index: 5;
+		display: inline-flex;
+		align-items: center;
+		font-weight: 600;
+		line-height: math.div(22, 18);
+		gap: em(15, 18);
+		transition: all .3s ease 0s;
+		&::before {
+			font-size: rem(28);
+		}
+		@media(any-hover: hover) {
+			&:hover {
+				color: $mainOrangeLightColor;
+				span {
+					text-decoration: underline;
+				}
+			}
+			&:focus-visible {
+				span {
+					text-decoration: underline;
+				}
+			}
+			&:active {
+				color: $mainOrangeColor;
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
+		@media (max-width: $tablet) {
+			&::before {
+				font-size: rem(35);
+			}
+			span {
+				display: none;
+			}
+		}
+	}
+}
+.menu-top-header {
+	&__list {
+		display: flex;
+		row-gap: rem(5);
+		@include adaptiveValue("column-gap", 60, 20);
+		@media (max-width: $tablet) {
+			// flex-wrap: wrap;
+			flex-direction: column;
+			row-gap: rem(25);
+		}
+	}
+	&__item {
+		&_catalog {
+			@media (min-width: $tablet) {
+				display: none;
+			}
+		}
+	}
+	&__link {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		transition: all .3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainOrangeLightColor;
+			}
+			&:focus-visible {
+				text-decoration: underline;
+				
+			}
+			&:active {
+				color: $mainOrangeColor;
+			}
+		}
+		&_catalog {
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			&::before {
+				flex: 0 0 14px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 14px;
+				font-size: rem(8);
+				transform: translateY(rem(-2)) rotate(-90deg);
+			}
+		}
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 30, 20, 0, 992, 320)
+		}
+	}
+	@media (max-width: $tablet) {
+		display: none;
+	}
+}
+//====================================================================================================
+.menu {
+	&__body {
+		@media (max-width: $tablet) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -100%;
+			overflow: auto;
+			padding: rem(100) rem(15) rem(50) rem(15);
+			z-index: 4;
+			background-color: $mainDarkColor;
+			transition: left .3s ease 0s;
+			&::before {
+				content: '';
+				position: fixed;
+				width: 100%;
+				height: 70px;
+				left: -100%;
+				top: 0;
+				background-color: $mainDarkColor;
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}	
+	}
+	@media (max-width: $tablet) {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+//====================================================================================================
+.body-header {
+	padding: rem(10) 0;
+	background-color: #ecf1f2;
+	&__container {
+		min-height: rem(70);
+		display: flex;
+		align-items: center;
+		@media (max-width: $tablet) {
+			justify-content: space-between;
+		}
+	}
+	&__logo {
+		@extend %ic;
+		@extend ._icon-logo;
+		font-size: rem(42);
+		color: $mainDarkColor;
+		transition: all .3s ease 0s;
+		@media (any-hover: hover) {
+			&:focus-visible {
+				background: linear-gradient(45deg, #e8aa31, #333333, #e8fa31);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+	&__search {
+		flex: 1 1 auto;
+		@media (min-width: $tablet) {
+			padding-right: rem(20);
+		}
+		@media (min-width: $mobileSmall) {
+			@include adaptiveValue("padding-left", 158, 20, 0, 1620, 1250);
+		}
+	}
+	&__actions {
+	}
+}
+.search-header {
+	position: relative;
+	border: 1px solid rgba(4, 4, 4, .5);
+	background-color: rgba(7, 7, 7, .03);
+	border-radius: rem(3);
+	&__button {
+		position: absolute;
+		top: 0;
+		left: rem(8);
+		width: rem(41);
+		height: rem(41);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: rem(14);
+		color: rgba(0, 0, 0, .5);
+		background-color: transparent;
+		transition: all .3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainOrangeColor;	
+			}
+		}
+	}
+	&__input {
+		width: 100%;
+		height: rem(41);
+		border-radius: rem(3);
+		padding: 0 rem(20) 0 rem(50);
+		color: $mainColor;
+		background-color: transparent;
+		transition: all .3s ease 0s;
+		&::placeholder {
+			color: rgba(0, 0, 0, .5);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0px 4px 20px rgb(0 0 0 / 25%);
+			}
+			&:focus-visible {
+				box-shadow: 0px 4px 20px rgb(0 0 0 / 25%);
+			}
+		}
+	}
+	@media (min-width: $tablet) {
+		max-width: rem(377);
+	}
+	@media (max-width: $mobileSmall) {
+		background-color: #fff;
+	}
+}
+//====================================================================================================
+.actions-header {
+	display: flex;
+	align-items: center;
+	@media (max-width: $tablet) {
+		display: none;
+	}
+	column-gap: rem(30);
+	@include adaptiveValue("column-gap", 30, 15, 0, 1620, 1000);
+	&__location {
+		display: inline-flex;
+		align-items: center;
+		font-weight: 600;
+		@include adaptiveValue("margin-right", 25, 0, 0, 1620, 1400);
+		transition: all .3s ease 0s;
+		@media(any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
+			&:focus-visible {
+				span {
+					text-decoration: underline;
+				}
+			}
+			&:active {
+				color: $mainOrangeColor;
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
+		&::before {
+			font-size: rem(24);
+			margin: 0 em(10, 24) 0 0;
+		}
+		@media(any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+
+				}
+			}
+		}
+	}
+	&__phones {
+	}
+	&__favorite {
+		position: relative;
+		z-index: 5;
+		font-size: rem(27);
+		transition: all .3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainOrangeColor;
+			}
+			&:focus-visible {
+				color: $mainOrangeColor;
+			}
+			&:active {
+				opacity: .4;
+				
+			}
+		}
+	}
+	&__cart {
+		flex:  0 0 auto;
+		
+	}
+}
+.phones-header {
+		position: relative;
+		z-index: 5;
+		&__items {
+			
+		}
+		&__item {
+			position: relative;
+			display: flex;
+		}
+		&__phone {
+			font-weight: 600;
+			white-space: nowrap;
+			line-height: math.div(22, 18);
+			transition: all .3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: .5;
+				}
+				&:focus-visible {
+					outline: none;
+					text-decoration: underline;		
+				}
+				&:active {
+					
+				}
+			}
+			&::before {
+				@extend %ic;
+				@extend ._icon-footer-phone;
+				display: none;
+				font-size: rem(32);
+			}
+			@media (max-width: $tablet) {
+				font-size: rem(20);
+			}
+			@media (max-width: $mobileSmall) {
+				&::before {
+					display: block;
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+		&__arrow {
+			margin: 0 0 0 em(17, 16);
+			font-size: rem(10);
+			color: $mainOrangeColor;
+			transition: all .5s ease 0s;
+			&._spoller-active {
+				transform: rotate(-180deg);
+			}
+			@media (max-width: $tablet) {
+				display: none;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainOrangeLightColor;
+				}
+				&:focus-visible {
+					outline: 1px solid $mainOrangeColor;
+					outline-offset: 4px;
+				}
+				&:active {
+					
+				}
+			}
+		}
+		&__list {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			margin: rem(5) 0 0 0;
+			padding: rem(15);
+			background-color: #fff;
+			border-radius: rem(10);
+			z-index: 2;
+			box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+			li {
+				&:not(:last-child) {
+					margin-bottom: em(8, 18)
+				}
+			}
+			@media (max-width: $tablet) {
+				display: none;
+			}
+		}
+		&__callback {
+			margin: rem(3) 0 0 0;
+			font-weight: 700;
+			line-height: math.div(22, 18);
+			color: $mainOrangeColor;
+			transition: all .3s ease 0s;
+			@media (max-width: $tablet) {
+				display: none;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+				&:focus-visible {
+					text-decoration: underline;
+				}
+			}
+		}
+}
+.cart-header {
+	position: relative;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	column-gap: rem(15);
+	transition: all .3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			._icon-cart {
+				color: $mainOrangeColor;
+			}
+		}
+		&:focus-visible {
+			._icon-cart {
+				color: $mainOrangeColor;
+			}
+		}
+		&:active {
+			._icon-cart {
+				opacity: .4;
+			}
+		}
+	}
+	&__icon {
+		flex: 0 0 37px;
+		font-size: rem(35);
+		position: relative;
+		span {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: rem(14);
+			height: rem(14);
+			font-size: rem(7);
+			color: #fff;
+			background-color: $mainOrangeColor;
+			border-radius: 50%;
+		}
+	}
+	&__body {
+		flex: 0 0 auto;
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		@media (max-width: em(1250)) {
+			display: none;
+		}
+	}
+	&__summ {   
+		font-weight: 500;
+		&:not(:last-child) {
+			margin-bottom: em(5, 16);
+		}
+	}
+	&__link {
+		color: $mainOrangeColor;
+		@media(any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+//====================================================================================================
+.catalog-header {
+	position: relative;
+	color: #fff;
+	background-color: $mainDarkColor;
+	&__container {
+		
+	}
+	&__menu {
+
+	}
+	@media (max-width: $mobileSmall) {
+		padding: rem(20) 0;
+	}
+}
+.menu-catalog {
+	@media (max-width: $tablet) {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		padding: rem(50) rem(15) rem(50) rem(15);
+		transition: left .3s ease 0s;
+		background-color: $mainDarkColor;
+		.catalog-open & {
+			left: 0;
+			z-index: 6;
+		}
+	}
+	&__list {
+		display: flex;
+		column-gap: rem(10);
+		justify-content: space-between;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			row-gap: rem(25);
+		}
+	}
+	&__item {
+		
+	}
+	&__link {
+		position: relative;
+		display: flex;
+		transition: color .3s ease 0s;
+		&[data-parent] {
+			&::before {
+				@extend %ic;
+				@extend ._icon-arrow-bottom;
+				display: none;
+				@media (max-width: $tablet) {
+					display: block;
+					transform: translateY(rem(5)) rotate(-90deg);
+					font-size: rem(10);
+				}		
+			}
+			@media (max-width: $tablet) {
+				display: flex;
+				width: 100%;
+				flex-direction: row-reverse;
+				justify-content: space-between;
+			}
+		}
+		@media (min-width: $tablet) {
+			min-height: rem(70);
+			padding: 0 rem(10);
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		&::after {
+			content: '';
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			left: rem(10);
+			bottom: 0;
+			width: calc(100% - rem(20));
+			height: rem(1);
+			background-color: $mainOrangeColor;
+			transition: all .3s ease 0s;
+		}
+		@media(any-hover: hover) {
+			&:hover {
+				color: $mainOrangeColor;
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}	
+			}
+			&:focus-visible {
+				color: $mainOrangeLightColor;
+				&::after {
+					opacity: 1;
+					background-color: $mainOrangeLightColor;
+					visibility: visible;
+				}
+			}
+		}
+		@media (min-width: $tablet) {
+			&._sub-menu-active {
+				color: $mainOrangeColor;
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	@media (max-width: $tablet) {
+		@include adaptiveValue("font-size", 30, 20, 0, 992, 320);
+	}
+	&__sub-menu {
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: $mainDarkColor;
+		
+	}
+	&__back {
+		display: none;
+		@media (max-width: $tablet) {
+			display: inline-flex;
+			align-items: center;
+			@include adaptiveValue("font-size", 30, 20, 0, 992, 320);
+			&:not(:last-child) {
+				margin-bottom: em(65, 30);
+			}
+			&::before {
+				margin: 0 em(13, 30) 0 0;
+			}
+		}
+	}
+}
+.sub-menu-catalog {
+	@media (max-width: $tablet) {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		padding: rem(50) rem(15) rem(50) rem(15);
+		transition: left .3s ease 0s;
+		background-color: $mainDarkColor;
+		.sub-menu-open & {
+			display: block;
+			left: 0;
+			z-index: 6;
+		}
+	}
+	&__back {
+		display: none;
+		@media (max-width: $tablet) {
+			display: inline-flex;
+			align-items: center;
+			@include adaptiveValue("font-size", 30, 20, 0, 992, 320);
+			&:not(:last-child) {
+				margin-bottom: em(65, 30);
+			}
+			&::before {
+				margin: 0 em(13, 30) 0 0;
+			}
+		}
+	}
+	&__block {
+		display: none;
+		@for $var from 1 to 6 {
+			&_#{$var} {
+				// justify-items: start;
+				grid-template-columns: repeat($var, minmax(auto, rem(320)));
+			}
+		}
+		&._sub-menu-open {
+			display: grid;
+			@media (max-width: $tablet) {
+				display: block;
+			}
+		}
+		
+	}
+	&__container {
+		padding: 0 rem(10);
+		
+	}
+	&__category {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		@media(any-hover: hover) {
+			&:hover {
+				text-decoration: underline
+			}
+		}
+		@media (min-width: $tablet) { 
+			padding: rem(30) rem(15) rem(30) 0;
+			font-weight: 700;
+		}
+		@media (max-width: $tablet) {
+			&:not(:last-child) {
+				margin-bottom: em(25, 16);
+			}
+		}
+	}
+	&__list{
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+		padding: rem(30) rem(15) rem(30) 0;
+		border-top: 1px solid rgba(255, 255, 255, .3);
+		border-bottom: 1px solid rgba(255, 255, 255, .3);
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+	&__item {
+	}
+	&__link {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		@media(any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__link-category {
+		@include adaptiveValue("font-size", 30, 20, 1, 992, 320);
+	}
+	&__footer {
+		padding: rem(30) rem(15) rem(30) 0;
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+	&__all {
+		font-size: rem(16);
+		font-weight: 500;
+		color: $mainOrangeColor;
+		@media(any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+}
+//====================================================================================================
+//Burger
+.icon-menu {
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		width: 40px;
+		height: 22.5px;
+		z-index: 10;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #fff;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

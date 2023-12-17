@@ -1,0 +1,101 @@
+//========================================================================================================================================================
+.service-price {
+    @include adaptiveValue("padding-top", 80, 40);
+    @include adaptiveValue("padding-bottom", 100, 50);
+    // .service-price__container
+    &__container {
+    }
+    // .service-price__content
+    &__content {
+    }
+    // .service-price__title
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 48, 36);
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: rem(80);
+    }
+    // .service-price__block
+    &__block {
+    }
+}
+.block-prices {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("row-gap", 80, 30);
+    // .block-prices__item
+    &__item {
+        display: grid;
+        @media (min-width:$tablet){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        gap: rem(30);
+        &:nth-child(2n) {
+            .block-prices__image-ibg {
+                order: 1;
+            }     
+        }
+        
+    }
+    // .block-prices__title
+    &__title {
+        @include adaptiveValue("font-size", 36, 24);
+        line-height: 120%;
+        font-weight: 700;
+        @media (min-width:$tablet){
+            display: none;
+        }
+    }
+    // .block-prices__image-ibg
+    &__image-ibg {
+        align-self: start;
+        display: block;
+        padding-bottom: percent(536,636);
+        @media (max-width:$tablet){
+            display: none;
+        }
+    }
+    // .block-prices__list
+    &__list {
+    }
+}
+.list-price {
+
+    // .list-price__item
+    &__item {
+        display: flex;
+        gap: rem(20);
+        justify-content: space-between;
+        border-bottom: 1px solid #fff;
+        padding-bottom: rem(20);
+        align-items: center;
+        &:not(:first-child) {
+            padding-top: rem(20);
+        }
+        @media (max-width:$tablet){
+            &:first-child {
+                border-top: 1px solid #fff;
+                padding-top: rem(20);
+            }
+            &_b {
+                border: none;
+
+            }
+        }
+        
+    }
+    // .list-price__title
+    &__title {
+        @include adaptiveValue("font-size", 24, 18);
+        line-height: 130%;
+    }
+    // .list-price__money
+    &__money {
+        flex: 0 1 rem(120);
+        text-align: end;
+        @include adaptiveValue("font-size", 18, 16);
+        line-height: 130%;
+    }
+}
+//========================================================================================================================================================

@@ -1,0 +1,338 @@
+.hero {
+  &-name {
+    span {
+      position: relative;
+      @include adaptiveValue("padding-left", 50, 25);
+      font-weight: 600;
+      @include adaptiveValue("font-size", 24, 20);
+      line-height: math.div(36, 24);
+      color: $primaryColor;
+      &::before {
+          content:'';
+          position: absolute;
+          @include adaptiveValue("width", 40, 20);
+          height: 2px;
+          top: 50%;
+          left: 0;
+          background-color: $primaryColor;
+          border-radius: 2px;
+      }
+    }
+    @media (max-width:$mobile){
+        text-align: center;
+    }
+  }
+  &-title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 96, 38);
+    line-height: math.div(120, 96);
+    letter-spacing: -1.5px;
+    color: $whitePrimaryColor;
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 30, 36);
+    }
+    @media (max-width:$mobile){
+        text-align: center;
+    }
+  }
+  &-main {
+    position: relative;
+    img {
+        position: absolute;
+        width: 60%;
+        bottom: rem(-10);
+        right: rem(155);
+    }
+  }
+  &-descr {
+    @include adaptiveValue("font-size", 20, 18);
+    line-height: math.div(32, 20);
+    color: $greyTextColor;
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 80, 20);
+    }
+    @media (max-width:$mobile){
+        text-align: center;
+    }
+  }
+  &-body {
+    display: flex;
+    @include adaptiveValue("padding-bottom", 165, 60);
+  }
+  &-content {
+    flex: 0 1 rem(920);
+    margin-top: rem(160);
+  }
+  &-img {
+    position: relative;
+    flex: 1 1 auto;
+    &::before{
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #5570FE;
+        opacity: 0.06;
+        filter: blur(70px);
+    }
+  }
+}
+//========================================================================================================================================================
+.btn {
+  &-primary {
+    border-radius: 4px;
+    background-color: $primaryColor;
+    transition: all 0.5s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        color: $primaryColor;
+        background-color: $mainColor !important;
+      }
+    }
+  }
+  &-border {
+    border: 1px solid $mainColor;
+    border-radius: 4px;
+    transition: all 0.5s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        border-color: $paleGreenColor;
+        background-color: $paleGreenColor;
+      }
+    }
+  }
+}
+
+.site-title {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 58, 42);
+  line-height: math.div(73, 58);
+  &--small {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 46, 24);
+    line-height: math.div(52, 46);
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+.article {
+  &--center {
+    position: relative;
+    @include adaptiveValue("max-width", 1320, 700, 0, 1600, 1200);
+    margin: 0 auto;
+    @include adaptiveValue("margin-top", -110, 0);
+    z-index: 10;
+  }
+  &--head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+        margin-bottom: rem(20);
+    }
+  }
+  &--date {
+    @include adaptiveValue("font-size", 20, 18, 0, 1480, 778);
+    font-weight: 600;
+    line-height: math.div(20, 32);
+    color: $grey-paragraph-6;
+    span {
+        color: $grey-paragraph-8;
+    }
+  }
+  &--current {
+    @include adaptiveValue("font-size", 18, 16, 0, 1480, 778);
+    color: $grey-paragraph-6;
+    line-height: math.div(28, 18);
+  }
+  &--title {
+    @include adaptiveValue("margin-bottom", 30, 16, 0, 1480, 778);
+    font-weight: 600;
+    @include adaptiveValue("font-size", 46, 24, 0, 1480, 778);
+  }
+  &--descr {
+    @include adaptiveValue("font-size", 18, 16, 0, 1480, 778);
+    line-height: math.div(28, 18);
+    color: $greyTextColor;
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 40, 20, 0, 1480, 778);
+    }
+  }
+  &--user {
+    display: flex;
+    gap: rem(10);
+    align-items: center;
+    span {
+      @include adaptiveValue("font-size", 18, 16, 0, 1480, 778);
+      line-height: math.div(28, 18);
+      color: $greyTextColor;
+    }
+  }
+}
+
+//========================================================================================================================================================
+.hidden {
+  &-pc {
+    @media (max-width: em(1536)){
+        display: none;
+    }
+  }
+  &-tab {
+    @media (max-width: em(1270)){
+        display: none;
+    }
+  }
+  &-xl {
+    @media (max-width: em(1060)){
+      display: none;
+    }
+  }
+  &-lg {
+    @media (max-width: em(850)){
+      display: none;
+    }
+  }
+}
+
+.percent {
+  display: flex;
+  font-weight: 600;
+  font-size: rem(16);
+  line-height: math.div(24, 16);
+  &::before{
+    margin-right: 12px;    
+  }
+  &-up {
+    color: $greenColor;
+  }
+  &-down {
+    color: $redColor;
+  }
+}
+//========================================================================================================================================================
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $primaryBoldColor #fff;
+}
+  
+/* Работает в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: #fff;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: $primaryBoldColor;
+    border-radius: 20px;
+    border: 3px solid #fff;
+}
+.hidden {
+    display: none;
+}
+
+//========================================================================================================================================================
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+//========================================================================================================================================================
+.swiper-dotts {
+  display: flex;
+  gap: rem(15);
+  justify-content: center;
+  margin-top: rem(40);
+  transform: translate(0, 10%);
+  .swiper-pagination-bullet {
+      position: relative;
+      height: rem(30);
+      width: rem(15);
+      cursor: pointer;
+      transition: all .3s ease 0s;
+      &::after {
+          content: "";
+          position: absolute;
+          height: rem(2);
+          width: 100%;
+          top: 50%;
+          transform: translate(0, -50%);
+          background-color: $greyTextColor;
+      }
+      
+  }
+  .swiper-pagination-bullet-active {
+      width: rem(30);
+      &::after {
+          background-color: $mainColor; 
+      }
+  }
+}
+//========================================================================================================================================================
+.body-market {
+  /* .body-market-home__cards */
+  &__cards {
+      display: flex;
+      gap: 30px;
+      &:not(:last-child) {
+          @include adaptiveValue("margin-bottom", 60, 40);
+      }
+  }
+  /* .body-market-home__card */
+  &__card {
+      flex: 1 1 auto;
+      // padding: 40px 30px;
+      text-align: center;
+      border: 2px solid $bg-card-bg-2;
+      border-radius: rem(10);
+  }
+}
+//========================================================================================================================================================
+tbody, td, tfoot, th, thead, tr {
+  border: none;       
+}
+//========================================================================================================================================================
+.statistics-list {
+  display: flex;
+  /* .statistics-list__item */
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &:not(:first-child) {
+      padding-left: 90px;
+    }
+    &:not(:last-child) {
+      padding-right: 90px;
+      &::after{
+        content:'';
+        position: absolute;
+        width: 1px;
+        height: 60px;
+        top: 0;
+        right: 0;
+        opacity: .2;
+        background-color: #fff;
+      }
+    }
+  }
+  /* .statistics-list__num */
+  &__num {
+    font-weight: 700;
+    font-size: rem(46);
+  }
+  /* .statistics-list__text */
+  &__text {
+    font-size: rem(20);
+    line-height: math.div(32, 20);
+  }
+}
