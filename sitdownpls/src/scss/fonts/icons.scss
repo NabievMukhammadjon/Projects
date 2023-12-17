@@ -1,0 +1,72 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+/*
+._icon-cart::before {
+	content: "\e900";
+}
+._icon-phone::before {
+	content: "\e901";
+}
+._icon-question::before {
+	content: "\e902";
+}
+._icon-search::before {
+	content: "\e903";
+}
+._icon-spoller-arrow::before {
+	content: "\e904";
+}
+._icon-star::before {
+	content: "\e905";
+}
+._icon-user::before {
+	content: "\e906";
+}
+*/
+//========================================================= 
+._icon-cart:before {
+	content: "\e900";
+  }
+  ._icon-facebook:before {
+	content: "\e901";
+  }
+  ._icon-instagram:before {
+	content: "\e902";
+  }
+  ._icon-phone:before {
+	content: "\e903";
+  }
+  ._icon-question:before {
+	content: "\e904";
+  }
+  ._icon-search:before {
+	content: "\e905";
+  }
+  ._icon-spoller-arrow:before {
+	content: "\e906";
+  }
+  ._icon-star:before {
+	content: "\e907";
+  }
+  ._icon-user:before {
+	content: "\e908";
+  }
+  ._icon-vk:before {
+	content: "\e909";
+  }
+  
+  
