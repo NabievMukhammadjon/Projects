@@ -1,0 +1,5 @@
+@import "/src/components/image-tile/style";
+
+.main-gallery {
+  @include block-padding;
+}

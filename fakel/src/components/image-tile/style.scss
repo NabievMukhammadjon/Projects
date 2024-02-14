@@ -1,0 +1,99 @@
+.image-tile {
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  display: block;
+  height: 240px;
+  @include media_from('md') {
+    height: 500px;
+  }
+  @include media_from('xl') {
+    height: 700px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      transition: 0.2s ease;
+      transform: scale(1.02);
+    }
+  }
+
+  &__btn {
+    color: $image-tile-btn-font-color;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    font-weight: 600;
+    margin: 24px;
+    bottom: 0;
+
+    &:hover {
+      color: $image-tile-btn-font-color;
+      transition: 0.1s all;
+      box-shadow: 0 0 10px $image-tile-btn-shadow-color;
+    }
+
+    padding: 7px 20px;
+    border-radius: 5px;
+    @include media_from('xl') {
+      padding: 10px 30px;
+      border-radius: 10px;
+    }
+    font-size: $image-tile-btn-font-size-display-xs;
+    @include media_from('xl') {
+      font-size: $image-tile-btn-font-size-display-xl;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-weight: 700;
+    font-size: $image-tile-font-size-display-xs;
+    @include media_from('lg') {
+      font-size: $image-tile-font-size-display-lg;
+    }
+    color: $image-tile-font-color;
+
+    &:hover {
+      color: $image-tile-font-color;
+    }
+  }
+
+  &--half {
+    height: 240px;
+    @include media_from('xl') {
+      height: 339px;
+    }
+  }
+
+  &__mobile-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    @include media_from('md') {
+      display: none;
+    }
+  }
+}
+
+.image-tile__wrapper_type_page-aboutus {
+  width: 100%;
+  height: 100%;
+}
+
+.image-tile_type_page-aboutus {
+  max-height: 279px;
+  @media (min-width: 768px) {
+    max-height: 315px;
+  }
+  @media (min-width: 1200px) {
+    max-height: 500px;
+  }
+}

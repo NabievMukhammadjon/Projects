@@ -1,0 +1,30 @@
+.btns {
+    display: flex;
+    gap: 15px;
+}
+.btnRed {
+    border: 2px solid var(--red);
+    padding: 13px 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 106%;
+    color: var(--red);
+    transition: all 0.5s ease 0s;
+}
+.btnRed:focus-visible,
+.btnRed:hover {
+    color: var(--white);
+    background-color: var(--redBold);
+}
+.btnGreen {
+    padding: 15px 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 106%;
+    color: var(--white);
+    background-color: var(--greenLight);    
+}
+.btnGreen:focus-visible,
+.btnGreen:hover {
+    background-color: var(--green);
+}

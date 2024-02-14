@@ -332,6 +332,72 @@ function initSliders() {
 			}
 		});
 	}
+	if (document.querySelector('.hero-articles__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.hero-articles__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination, Parallax, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			parallax: true,
+			// autoHeight: true,
+			speed: 800,
+
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
+
+			// touchRatio: 1,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			
+			pagination: {
+				el: '.hero-articles__dotts',
+				clickable: true,
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				640: {
+					// slidesPerView: 1,
+					// spaceBetween: 0,
+					// autoHeight: true,
+				},
+				768: {
+					// slidesPerView: 1,
+					// spaceBetween: 20,
+				},
+				992: {
+					// slidesPerView: 2,
+				},
+				1268: {
+					// slidesPerView: 2.3,
+				},
+			},
+			
+			// События
+			on: {
+
+			}
+		});
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

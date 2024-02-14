@@ -15,6 +15,9 @@
             </section>
             <section class="page-market__exchange exchange-rate">
                 <div class="exchange-rate__container">
+                    <h2 class="exchange-rate__subtitle site-title--center">
+                      <span class="_icon-arrowUp">Market Overview</span>
+                    </h2>
                     <div class="exchange-rate__filter filter-exchange-rate">
                         <nav class="filter-exchange-rate__nav">
                             <ul class="filter-exchange-rate__list">
@@ -48,9 +51,10 @@
                             </ul>
                         </nav>
                         <form class="filter-exchange-rate__search">
-                            <label for="exchangeRateSearch" class="filter-exchange-rate__label">
-                                <input id="exchangeRateSearch" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Search Here" class="filter-exchange-rate__input">
-                            </label>
+                          <div class="filter-exchange-rate__box super-input">
+                            <input id="exchangeRateSearch" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="filter-exchange-rate__input" required>
+                            <label for="exchangeRateSearch" class="filter-exchange-rate__label">Search Here</label>
+                          </div>
                         </form>
                     </div>
                     <div class="exchange-rate__body body-exchange-rate">
@@ -70,7 +74,7 @@
                               <tr>
                                 <th scope="row">Bitcoin / BTC</th>
                                 <td>₹ 24,842,27.65</td>
-                                <td class="_icon-arrowShareUp">5.76%</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
                                 <td>₹ 3,01,25,65,275.52</td>
                                 <td>₹ 28,482,37.18</td>
                                 <td>₹ 8,56,54,456.95</td>
@@ -79,7 +83,7 @@
                               <tr>
                                 <th scope="row">Bitcoin / BTC</th>
                                 <td>₹ 24,842,27.65</td>
-                                <td class="_icon-arrowShareUp">5.76%</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
                                 <td>₹ 3,01,25,65,275.52</td>
                                 <td>₹ 28,482,37.18</td>
                                 <td>₹ 8,56,54,456.95</td>
@@ -88,7 +92,7 @@
                               <tr>
                                 <th scope="row">Bitcoin / BTC</th>
                                 <td>₹ 24,842,27.65</td>
-                                <td class="_icon-arrowShareUp">5.76%</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
                                 <td>₹ 3,01,25,65,275.52</td>
                                 <td>₹ 28,482,37.18</td>
                                 <td>₹ 8,56,54,456.95</td>
@@ -97,7 +101,7 @@
                               <tr>
                                 <th scope="row">Bitcoin / BTC</th>
                                 <td>₹ 24,842,27.65</td>
-                                <td class="_icon-arrowShareUp">5.76%</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
                                 <td>₹ 3,01,25,65,275.52</td>
                                 <td>₹ 28,482,37.18</td>
                                 <td>₹ 8,56,54,456.95</td>
@@ -106,7 +110,7 @@
                               <tr>
                                 <th scope="row">Bitcoin / BTC</th>
                                 <td>₹ 24,842,27.65</td>
-                                <td class="_icon-arrowShareUp">5.76%</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_red _icon-arrowShareDown">5.76%</td>
                                 <td>₹ 3,01,25,65,275.52</td>
                                 <td>₹ 28,482,37.18</td>
                                 <td>₹ 8,56,54,456.95</td>
@@ -115,7 +119,7 @@
                               <tr>
                                 <th scope="row">Bitcoin / BTC</th>
                                 <td>₹ 24,842,27.65</td>
-                                <td class="_icon-arrowShareUp">5.76%</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
                                 <td>₹ 3,01,25,65,275.52</td>
                                 <td>₹ 28,482,37.18</td>
                                 <td>₹ 8,56,54,456.95</td>
@@ -124,7 +128,7 @@
                               <tr>
                                 <th scope="row">Bitcoin / BTC</th>
                                 <td>₹ 24,842,27.65</td>
-                                <td class="_icon-arrowShareUp">5.76%</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_red _icon-arrowShareDown">5.76%</td>
                                 <td>₹ 3,01,25,65,275.52</td>
                                 <td>₹ 28,482,37.18</td>
                                 <td>₹ 8,56,54,456.95</td>
@@ -133,7 +137,7 @@
                               <tr>
                                 <th scope="row">Bitcoin / BTC</th>
                                 <td>₹ 24,842,27.65</td>
-                                <td class="_icon-arrowShareUp">5.76%</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
                                 <td>₹ 3,01,25,65,275.52</td>
                                 <td>₹ 28,482,37.18</td>
                                 <td>₹ 8,56,54,456.95</td>
@@ -142,7 +146,70 @@
                               <tr>
                                 <th scope="row">Bitcoin / BTC</th>
                                 <td>₹ 24,842,27.65</td>
-                                <td class="_icon-arrowShareUp">5.76%</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
+                                <td>₹ 3,01,25,65,275.52</td>
+                                <td>₹ 28,482,37.18</td>
+                                <td>₹ 8,56,54,456.95</td>
+                                <td>Trade</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bitcoin / BTC</th>
+                                <td>₹ 24,842,27.65</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
+                                <td>₹ 3,01,25,65,275.52</td>
+                                <td>₹ 28,482,37.18</td>
+                                <td>₹ 8,56,54,456.95</td>
+                                <td>Trade</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bitcoin / BTC</th>
+                                <td>₹ 24,842,27.65</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
+                                <td>₹ 3,01,25,65,275.52</td>
+                                <td>₹ 28,482,37.18</td>
+                                <td>₹ 8,56,54,456.95</td>
+                                <td>Trade</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bitcoin / BTC</th>
+                                <td>₹ 24,842,27.65</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_red _icon-arrowShareDown">5.76%</td>
+                                <td>₹ 3,01,25,65,275.52</td>
+                                <td>₹ 28,482,37.18</td>
+                                <td>₹ 8,56,54,456.95</td>
+                                <td>Trade</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bitcoin / BTC</th>
+                                <td>₹ 24,842,27.65</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
+                                <td>₹ 3,01,25,65,275.52</td>
+                                <td>₹ 28,482,37.18</td>
+                                <td>₹ 8,56,54,456.95</td>
+                                <td>Trade</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bitcoin / BTC</th>
+                                <td>₹ 24,842,27.65</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_red _icon-arrowShareDown">5.76%</td>
+                                <td>₹ 3,01,25,65,275.52</td>
+                                <td>₹ 28,482,37.18</td>
+                                <td>₹ 8,56,54,456.95</td>
+                                <td>Trade</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bitcoin / BTC</th>
+                                <td>₹ 24,842,27.65</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
+                                <td>₹ 3,01,25,65,275.52</td>
+                                <td>₹ 28,482,37.18</td>
+                                <td>₹ 8,56,54,456.95</td>
+                                <td>Trade</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bitcoin / BTC</th>
+                                <td>₹ 24,842,27.65</td>
+                                <td class="table-exchange-rate__percent table-exchange-rate__percent_green _icon-arrowShareUp">5.76%</td>
                                 <td>₹ 3,01,25,65,275.52</td>
                                 <td>₹ 28,482,37.18</td>
                                 <td>₹ 8,56,54,456.95</td>

@@ -1,0 +1,79 @@
+.article-card {
+  a {
+    text-decoration: none;
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &_type_media {
+    padding: 20px;
+  }
+
+  &__image {
+    margin-bottom: 10px;
+    width: 100%;
+    /* margin-top: 20px; */
+  }
+
+  &__date {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: $article-card-date-font-size-display-xs;
+    @include media_from("md") {
+      font-size: $article-card-date-font-size-display-md;
+    }
+    line-height: 150%;
+    color: #4f4f4f;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: $article-card-title-font-size-display-xs;
+    @include media_from("md") {
+      font-size: $article-card-title-font-size-display-md;
+    }
+    line-height: 150%;
+
+    &_type_media {
+      -webkit-line-clamp: 3; /* Число отображаемых строк */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      line-height: 27px;
+      height: 81px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    line-height: 150%;
+    font-size: $article-card-text-font-size-display-xs;
+    @include media_from("md") {
+      font-size: $article-card-text-font-size-display-md;
+    }
+
+    &_type_media {
+      -webkit-line-clamp: 4; /* Число отображаемых строк */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      height: 96px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      @media (max-width: 560px) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.cards {
+  margin-top: 5px;
+}

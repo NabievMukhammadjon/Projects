@@ -36,14 +36,16 @@ $cardBg: #272A34;
 
 $primaryColor: #1B70F1; 
 $primaryBoldColor: #5D76CB; 
+$primaryColor2: #5570FE;
 $paleGreenColor: #89AC76; 
 $greenColor: #06B470;
+$greenColor2:#06C96B;
 $redColor: #F74E2C;
 $yellowHoverColor: #F3DA0B;
 
 $greyTextColor: #ADB3BF; 
+$grey-2: #ECEEF0;
 $grey-4: #CFD3DA;
-$grey-paragraph-6: #ADB3BF;
 $grey-paragraph-8: #808A9A;
 
 // Настройки адаптивной сетки ===============================================================================================================================================================================================================================================================================================
@@ -169,10 +171,14 @@ ul, ol {
 // Подключение стилей общих элементов проекта
 @import "common";
 
+@import "articles";
+@import "articles-details";
 @import "blog-details";
 @import "blog";
 @import "market";
 @import "career";
+@import "about";
+@import "application";
 
 // Подключение стилей отдельных блоков
 @import "header";

@@ -1,0 +1,51 @@
+.header {
+    padding: 15px 0;
+    background: #FFF;
+    box-shadow: 0px 10px 63px 0px rgba(0, 0, 0, 0.07);
+}
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.5s ease 0s;
+}
+.logo span {
+    color: var(--red);
+    font-size: 24px;
+    font-weight: 300;
+    transition: all 0.5s ease 0s;
+}
+.logo:hover span,
+.logo:focus-visible span {
+    color: var(--redBold);
+}
+.link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.5s ease 0s;
+}
+.link span {
+    color: var(--red);
+    font-size: 16px;
+    transition: all 0.5s ease 0s;
+}
+.link svg {
+    transition: all 0.5s ease 0s;
+}
+.link:hover span,
+.link:focus-visible span {
+    color: var(--redBold);
+}
+.link:hover svg path {
+    fill: var(--redBold);
+}

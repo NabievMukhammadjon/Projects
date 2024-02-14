@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: $font-color;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: $font-color;
+
+  &:hover {
+    color: $theme-color;
+  }
+}
+
+h1 {
+  @include h1-font-size;
+  @include h1-padding-bottom;
+  font-weight: 600;
+}
+
+h2 {
+  @include h2-font-size;
+  @include h2-padding-bottom;
+  font-weight: 600;
+}
+
+body.noscroll {
+  overflow: hidden;
+}

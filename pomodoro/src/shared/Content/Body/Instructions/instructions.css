@@ -1,0 +1,20 @@
+.instructions {
+    margin-bottom: 25px;
+} 
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 137%;
+    margin-bottom: 6px;
+}
+.list {
+    padding-left: 19px;
+    list-style: disc;
+}
+.item {
+    color: var(--red);
+    line-height: 206%;
+}
+.item span {
+    font-size: 16px;
+}

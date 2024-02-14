@@ -1,0 +1,92 @@
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--greyLight);
+    padding: 70px 0 107px;
+}
+.time {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.count {
+    display: flex;
+    color: #333;
+    font-size: 150px;
+    font-weight: 200;
+    line-height: normal;
+}
+.minutes {
+}
+.seconds {
+
+}
+.btnAdd {
+    position: relative;
+    flex: 0 0 50px;
+    height: 50px;
+    transition: all 0.5s ease 0s;
+    background-color: var(--grey);
+    border-radius: 50%;
+}
+.btnAdd::after {
+    content: '+';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5px;
+    left: 0;
+    font-size: 34px;
+    color: var(--white);
+}
+.btnAdd:focus-visible,
+.btnAdd:hover {
+    background-color: var(--green);
+}
+.task {
+    margin-bottom: 32px;
+}
+.name {
+    display: inline-block;
+    color: var(--greyBold);
+    font-size: 16px;
+    line-height: 106%;
+}
+.subtitle {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 106%;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/ 
+.btns {
+    display: flex;
+    gap: 15px;
+}
+.btnRed {
+    border: 2px solid var(--red);
+    padding: 13px 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 106%;
+    color: var(--red);
+    transition: all 0.5s ease 0s;
+}
+.btnRed:focus-visible,
+.btnRed:hover {
+    color: var(--white);
+    background-color: var(--redBold);
+}
+.btnGreen {
+    padding: 15px 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 106%;
+    color: var(--white);
+    background-color: var(--greenLight);    
+}
+.btnGreen:focus-visible,
+.btnGreen:hover {
+    background-color: var(--green);
+}

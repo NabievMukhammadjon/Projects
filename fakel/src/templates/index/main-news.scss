@@ -1,0 +1,15 @@
+@import "/src/components/article-card/style";
+
+.main-news {
+  @include block-padding;
+  background-color: $main-news-background-color;
+
+  &__link {
+    margin-top: 20px;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

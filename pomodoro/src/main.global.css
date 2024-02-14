@@ -1,0 +1,89 @@
+/* @font-face {
+    font-family: 'sf_ui_displaybold';
+    src: url('./fonts/sf-ui-display-bold-webfont.woff2') format('woff2'),
+         url('./fonts/sf-ui-display-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_ui_displayheavy';
+    src: url('./fonts/sf-ui-display-heavy-webfont.woff2') format('woff2'),
+         url('./fonts/sf-ui-display-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_ui_displaymedium';
+    src: url('./fonts/sf-ui-display-medium-webfont.woff2') format('woff2'),
+         url('./fonts/sf-ui-display-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} */
+
+:root {
+    --white: #fff;
+    --black: #333;
+    --green: #899441;
+    --greenLight: #A8B64F;
+    --red: #DC3E22;
+    --redBold: #B7280F;
+    --redMedium: #EE735D;
+    --redLight: #EA8979;
+    --grey: #C4C4C4;
+    --greyLight: #F4F4F4;
+    --greyBold: #999;    
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--white);
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "SF UI Display", serif;
+    font-weight: 400;
+}
+
+* {
+    color: var(--black);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+input,
+a,
+button {
+    border: none;
+    outline: none;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+button {
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 30px;
+}

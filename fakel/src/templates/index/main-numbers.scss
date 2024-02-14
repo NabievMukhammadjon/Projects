@@ -1,0 +1,35 @@
+.main-numbers {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  white-space: nowrap;
+  @each $childNum, $color in $main-numbers-font-colors {
+    &__item:nth-child(#{$childNum}) {
+      color: $color;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media_from('lg') {
+      margin-bottom: 0;
+    }
+
+    font-size: 18px;
+    @include media_from('md') {
+      font-size: 20px;
+    }
+  }
+
+  &__num {
+    @include h2-font-size;
+    display: block;
+    margin-bottom: 5px;
+  }
+}

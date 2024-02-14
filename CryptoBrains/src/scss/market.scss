@@ -1,40 +1,116 @@
 .page-market {
+    position: relative;
     background-color: $bg-main-bg-1;
+    @media (min-width:$tablet){
+        &::before{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: rem(740);
+            top: rem(180);
+            left: rem(120);
+            border-radius: 1590px;
+            opacity: 0.04;
+            background: $primaryColor2;
+            filter: blur(70px);
+            z-index: 1;
+        }
+    }
     /* .page-market__cards */
     &__cards {
+        position: relative;
         @include adaptiveValue("padding-top", 90, 0);
         @include adaptiveValue("padding-bottom", 60, 10);
         @include adaptiveValue("margin-bottom", 60, 10);
+        z-index: 10;
     }
     /* .page-market__exchange */
     &__exchange {
+        position: relative;
+        z-index: 10;
     }
 }
 .body-market {
-    
+    @media (max-width:$tablet){
+        display: none;
+    }
     &__container {
         position: relative;
         @media (min-width:$tablet){  
             &::after {
                 content:'';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            left: 0;
-            @include adaptiveValue("bottom", -60, -30);
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 48.42%, rgba(255, 255, 255, 0.1) 100%);
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                left: 0;
+                @include adaptiveValue("bottom", -60, -30);
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 48.42%, rgba(255, 255, 255, 0.1) 100%);
             }
         }
     }
     /* .body-market__title */
     &__title {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 30);
+        }
     }
 }
 //========================================================================================================================================================
 .exchange-rate {
+    @media (min-width:$tablet){
+        &::before{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: rem(800);
+            // bottom: rem(115);
+            top: 0;
+            left: 0;
+            border-radius: 991px;
+            opacity: 0.06;
+            background: $primaryColor2;
+            filter: blur(70px);
+            z-index: 1;
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: rem(714);
+            bottom: rem(115);
+            left: 0;
+            border-radius: 1590px;
+            opacity: 0.04;
+            background: $primaryColor2;
+            filter: blur(70px);
+            z-index: 1;
+        }
+    }
+    @include adaptiveValue("padding-bottom", 120, 30);
     // background-color: #181B22;
     /* .exchange-rate__container */
     &__container {
+    }
+    &__subtitle {
+        @include adaptiveValue("margin-top", 20, 10, 0, 991, 480);
+        @include adaptiveValue("font-size", 36, 26, 0, 991, 480);
+        font-weight: 600;
+        @media (min-width:$tablet){
+            display: none; 
+        }
+        span {
+            position: relative;
+            display: inline;
+            &::before{
+                position: absolute;
+                width: rem(24);
+                height: rem(24);
+                bottom: 0;
+                left: 0;
+                @include adaptiveValue("left", -36, -56, 0, 991, 480);
+                transform: rotate(-135deg);
+            }
+        }
     }
     /* .exchange-rate__filter */
     &__filter {
@@ -47,32 +123,54 @@
     }
 }
 .filter-exchange-rate {
+    position: relative;
+    z-index: 10;
     display: flex;
     gap: 20px;
     justify-content:space-between;
     align-items: center;
-    padding: 20px;
+    @include adaptiveValue("padding", 20, 4);
     background-color: $bg-card-bg-2;
     border-radius: 4px;
     &:not(:last-child) {
-        margin-bottom: rem(60);
+        @include adaptiveValue("margin-bottom", 60, 20);
+    }
+    @media (max-width:$mobile){
+        flex-direction: column; 
+        background-color: transparent;
     }
     /* .filter-exchange-rate__nav */
     &__nav {
+        @media (max-width:$mobile){
+            width: 100%;     
+        }
     }
     /* .filter-exchange-rate__list */
     &__list {
         display: flex;
-        gap: 34px;
+        @include adaptiveValue("gap", 34, 30, 0, 1660, 991);
         align-items: center;
+        @media (max-width:$mobile){
+            justify-content: space-between;
+        }
     }
     /* .filter-exchange-rate__item */
     &__item {
+        @media (max-width:$tablet){
+            &:nth-last-child(-n + 3) {
+                display: none;
+            }
+        }
+        @media (max-width:$mobileSmall){
+            &:nth-last-child(-n + 5) {
+                display: none;
+            } 
+        }
     }
     /* .filter-exchange-rate__btn */
     &__btn {
         color: $greyTextColor;
-        font-size: rem(20);
+        @include adaptiveValue("font-size", 20, 18);
         line-height: math.div(32, 20);
         transition: all 0.5s ease 0s;
         @media (any-hover: hover){
@@ -83,6 +181,15 @@
     }
     /* .filter-exchange-rate__search */
     &__search {
+        @media (max-width:$mobile){
+            width: 100%;     
+        }
+        @media (min-width:$mobile){
+            flex: 0 1 rem(375);     
+        }
+    }
+    /* .filter-exchange-rate__box */
+    &__box {
     }
     /* .filter-exchange-rate__label */
     &__label {
@@ -101,13 +208,22 @@
 }
 .body-exchange-rate {
     &:not(:last-child) {
-        margin-bottom: rem(60);
+        @include adaptiveValue("margin-bottom", 60, 40);
     }
     /* .body-exchange-rate__table */
     &__table {
         &>:not(caption)>*>* {
+            padding: 25px 8px;
+            @include adaptiveValue("padding-top", 24, 14);
+            @include adaptiveValue("padding-bottom", 24, 14);
             color: #fff;
+            font-weight: 400;
+            @include adaptiveValue("font-size", 18, 14);
             background-color: $bg-main-bg-1;
+            @media (max-width:$tablet){
+                background-color: $bg-card-bg-2;
+                
+            }
         }
     }
 }
@@ -115,23 +231,72 @@
 
     /* .table-exchange-rate__head */
     &__head {
+        th {
+            @include adaptiveValue("font-size", 16, 12);
+            color: $greyTextColor;
+            
+            @media (max-width:$tablet){
+                background-color: transparent;
+                &:nth-last-child(-n + 2) {
+                        display: none;
+                }
+            }
+            @media (max-width:$mobile){
+                &:nth-last-child(-n + 4) {
+                        display: none;
+                }
+            } 
+        }
     }
     /* .table-exchange-rate__body */
     &__body {
+        td {
+            @media (max-width:$tablet){
+                &:nth-last-child(-n + 2) {
+                        display: none;
+                }
+            } 
+            @media (max-width:$mobile){
+                &:nth-last-child(-n + 4) {
+                        display: none;
+                }
+            } 
+        }
+    }
+    /* .table-exchange-rate__percent */
+    &__percent {
+        display: flex;
+        gap: rem(4);
+        align-items: center;
+        &_red {
+            color: $redColor !important;
+        }
+        &_green {
+            color: $greenColor2 !important;
+        }
     }
 }
 .btns-exchange-rate {
+    position: relative;
+    z-index: 10;
     display: flex;
     justify-content:center;
     align-items: center;
-    margin-bottom: rem(120);
     /* .btns-exchange-rate__button */
     &__button {
         display: flex;
-        padding: 19px 81px;
+        @include adaptiveValue("padding-top", 19, 13);
+        @include adaptiveValue("padding-bottom", 19, 13);
+        @include adaptiveValue("padding-left", 81, 18);
+        @include adaptiveValue("padding-right", 81, 18);
         justify-content: center;
         align-items: center;
         gap: 10px;
         border-radius: 4px;
+
+        @media (max-width:$mobileSmall){
+            width: 100%; 
+              
+        }
     }
 }

@@ -131,7 +131,7 @@
         justify-content: space-between;
         gap: 8px;
         @include adaptiveValue("font-size", 16, 12);
-        color: $grey-paragraph-6;
+        color: $greyTextColor;
         &:not(:last-child) {
             margin-bottom: rem(20);
         }

@@ -1,0 +1,18 @@
+/* .src-shared-Post-post_modal */
+
+.modal {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background-color: var(--white);
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.content {
+
+}
