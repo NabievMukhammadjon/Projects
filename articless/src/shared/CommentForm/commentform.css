@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+.input {
+    height: 80px;
+    margin-bottom: 16px;
+    padding: 20px;
+}
+.btn {
+    align-self: flex-end;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: orangered;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:disabled {
+    opacity: .5;
+    cursor: default;
+}
+.input[aria-invalid] {
+    border-color: red;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Apply Job"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page-application">
+				<div class="page-application__container">
+					<div class="page-application__head">
+						<h2 class="page-application__title"><span>Become Affiliate</span> Application Form</h2>
+						<div class="page-application__req">Required <span>*</span></div>
+					</div>
+					<form action="#" class="page-application__form form-application" data-dev data-popup-message="#formJobs">
+						<div class="form-application__row">
+							<h3 class="form-application__title">Basic Information</h3>
+							<fieldset class="form-application__basic basic-application">
+								<div class="basic-application__box">
+									<label for="userFirstName" class="basic-application__label application--label">First Name <span>*</span></label>
+									<!-- <input id="userFirstName" autocomplete="off" type="text" name="form[]" data-required data-error="Поле не заполнено" placeholder="Type Here" class="basic-application__input application--input"> -->
+									<input id="userFirstName" autocomplete="off" type="text" name="form[]" data-error="Поле не заполнено" placeholder="Type Here" class="basic-application__input application--input">
+								</div>	
+								<div class="basic-application__box">
+									<label for="userLastName" class="basic-application__label application--label">Last Name</label>
+									<input id="userLastName" autocomplete="off" type="text" name="form[]" placeholder="Type Here" class="basic-application__input application--input">
+								</div>
+								<div class="basic-application__box">
+									<label for="userPhoneNumber" class="basic-application__label application--label">Phone No <span>*</span></label>
+									<!-- <input id="userPhoneNumber" autocomplete="off" type="text" name="form[]" data-required data-error="Поле не заполнено" placeholder="Type Here" class="basic-application__input application--input">									 -->
+									<input id="userPhoneNumber" autocomplete="off" type="text" name="form[]" data-error="Поле не заполнено" placeholder="Type Here" class="basic-application__input application--input">									
+								</div>
+								<div class="basic-application__box">
+									<label for="userEmail" class="basic-application__label application--label">Email Address <span>*</span></label>
+									<!-- <input id="userEmail" autocomplete="off" type="text" name="form[]" data-required data-error="Поле не заполнено" placeholder="Type Here" class="basic-application__input application--input"> -->
+									<input id="userEmail" autocomplete="off" type="text" name="form[]" data-error="Поле не заполнено" placeholder="Type Here" class="basic-application__input application--input">
+								</div>
+							</fieldset>
+						</div>
+						<div class="form-application__row">
+							<h3 class="form-application__title">Address Information</h3>
+							<fieldset class="form-application__address address-application">
+								<div class="address-application__box address-application__box_big">
+									<label for="userAddress" class="address-application__label application--label">Address</label>
+									<input id="userAddress" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Type Here" class="address-application__input application--input">
+								</div>
+								<div class="address-application__box">
+									<label for="userState" class="address-application__label application--label">State</label>
+									<select name="form[]" id="userState" data-class-modif="form">
+										<option value="1" selected>Пункт №1</option>
+										<option value="2">Пункт №2</option>
+										<option value="3">Пункт №3</option>
+										<option value="4">Пункт №4</option>
+									</select>
+								</div>
+								<div class="address-application__box">
+									<label for="userPincode" class="address-application__label application--label">Pincode</label>
+									<input id="userPincode" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Type Here" class="address-application__input application--input">
+								</div>
+							</fieldset>
+						</div>
+						<div class="form-application__row">
+							<h3 class="form-application__title">Location Detail</h3>
+							<fieldset class="form-application__location location-application">
+								<div class="location-application__box">
+									<h4 class="location-application__subtitle application--label">What Loaction You Want for Work <span>*</span></h4>
+									<div class="location-application__options options">
+										<div class="options__item">
+											<input id="o_1" class="options__input" checked type="radio" value="1" name="optionLocation">
+											<label for="o_1" class="options__label"><span class="options__text">New Delhi</span></label>
+										</div>
+										<div class="options__item">
+											<input id="o_2" class="options__input" type="radio" value="2" name="optionLocation">
+											<label for="o_2" class="options__label"><span class="options__text">Chandigarh</span></label>
+										</div>
+										<div class="options__item">
+											<input id="o_3" class="options__input" type="radio" value="2" name="optionLocation">
+											<label for="o_3" class="options__label"><span class="options__text">Chennai</span></label>
+										</div>
+									</div>
+								</div>
+								<div class="location-application__box">
+									<h4 class="location-application__subtitle application--label">Are You Citizen of India <span>*</span></h4>
+									<div class="location-application__options options">
+										<div class="options__item">
+											<input id="o_yes" class="options__input" checked type="radio" value="1" name="optionCitizen">
+											<label for="o_yes" class="options__label"><span class="options__text">Yes</span></label>
+										</div>
+										<div class="options__item">
+											<input id="o_no" class="options__input" type="radio" value="2" name="optionCitizen">
+											<label for="o_no" class="options__label"><span class="options__text">No</span></label>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="form-application__row">
+							<h3 class="form-application__title">Id Details</h3>
+							<fieldset class="form-application__details details-application">
+								<div class="details-application__box">
+									<h4 class="details-application__title application--label">Resume/CV <span>*</span></h4>
+									<div class="details-application__body">
+										<div class="details-application__label">
+											<!-- <input id="userResume" type="file" name="file-resume" data-error="Прикрепите файл" data-required accept=".jpg, .doc, .png, .pdf" class="details-application__input"> -->
+											<input id="userResume" type="file" name="file-resume" data-error="Прикрепите файл" accept=".jpg, .doc, .png, .pdf" class="details-application__input">
+											<div class="details-application__inner">
+												<strong class="details-application__subtitle">Attach File</strong>
+												<span class="details-application__conditions">Please Upload ( PDF, DOC, JPG and PNG )</span>
+											</div>
+										</div>
+										<div id="previewFileResume" class="details-application__preview"></div>
+									</div>
+								</div>
+								<div class="details-application__box">
+									<h4 class="details-application__title application--label">Govt. ID <span>*</span></h4>
+									<div class="details-application__files">
+										<div class="details-application__body">
+											<div class="details-application__label">
+												<!-- <input id="userGovtFron" type="file" name="file-govt_front" data-error="Прикрепите файл" data-required accept=".jpg, .doc, .png, .pdf" class="details-application__input"> -->
+												<input id="userGovtFron" type="file" name="file-govt_front" data-error="Прикрепите файл" accept=".jpg, .doc, .png, .pdf" class="details-application__input">
+												<div class="details-application__inner">
+													<strong class="details-application__subtitle">Add Front Side</strong>
+													<span class="details-application__conditions">Please Upload ( PDF, DOC, JPG and PNG )</span>
+												</div>
+											</div>
+											<div id="previewFileGovtFront" class="details-application__preview"></div>										
+										</div>
+										<div class="details-application__body">
+											<div class="details-application__label">
+												<!-- <input id="userGovtBack" type="file" name="file-govt_back" data-error="Прикрепите файл" data-required accept=".jpg, .doc, .png, .pdf" class="details-application__input"> -->
+												<input id="userGovtBack" type="file" name="file-govt_back" data-error="Прикрепите файл" accept=".jpg, .doc, .png, .pdf" class="details-application__input">
+												<div class="details-application__inner">
+													<strong class="details-application__subtitle">Add Back Side</strong>
+													<span class="details-application__conditions">Please Upload ( PDF, DOC, JPG and PNG )</span>
+												</div>
+											</div>
+											<div id="previewFileGovtBack" class="details-application__preview"></div>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="form-application__row form-application__row_end">
+							<h3 class="form-application__subtitle">Additional Information</h3>
+							<fieldset class="form-application__additional additional-application">
+								<textarea id="userComments" class="additional-application__textarea" placeholder="Type Here"></textarea>
+							</fieldset>
+						</div>
+						<div class="form-application__btns">
+							<button type="submit" class="form-application__btn btn-primary">Submit Form</button>
+						</div>
+					</form>
+				</div>	
+            </main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

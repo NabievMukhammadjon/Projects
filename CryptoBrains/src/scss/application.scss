@@ -1,0 +1,647 @@
+.page-application {
+    @media (min-width:$tablet) {
+        padding: 0 15px;
+    }
+
+    background-color: $bg-main-bg-1;
+    @include adaptiveValue("padding-top", 120, 60);
+    @include adaptiveValue("padding-bottom", 120, 60);
+
+    &__container {
+        @include adaptiveValue("padding-left", 60, 15, 0, 1500, 991);
+        @include adaptiveValue("padding-right", 60, 15, 0, 1500, 991);
+        @include adaptiveValue("padding-top", 60, 0, 0, 1500, 991);
+        @include adaptiveValue("padding-bottom", 60, 0, 0, 1500, 991);
+
+        @media (min-width:$tablet) {
+            background-color: $bg-card-bg-2;
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 40);
+        }
+    }
+
+    /* .page-application__title */
+    &__title {
+        @include adaptiveValue("font-size", 36, 26);
+        color: var(--White, #FFF);
+        font-weight: 600;
+
+        @media (max-width:$tablet) {
+            span {
+                display: none;
+            }
+        }
+    }
+
+    &__req {
+        @include adaptiveValue("font-size", 16, 14);
+        line-height: math.div(24, 16);
+
+        span {
+            color: $redColor;
+        }
+    }
+
+    /* .page-application__form */
+    &__form {}
+}
+
+.form-application {
+
+    /* .form-application__row */
+    &__row {
+        position: relative;
+        @include adaptiveValue("padding-bottom", 60, 40);
+        @include adaptiveValue("margin-bottom", 60, 40);
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.20) 48.42%, rgba(255, 255, 255, 0.04) 100%);
+        }
+
+        &_end {
+            padding-bottom: 0;
+
+            &::after {
+                width: auto;
+                height: auto;
+                background: transparent
+            }
+        }
+    }
+
+    /* .form-application__title */
+    &__title {
+        @include adaptiveValue("font-size", 24, 20);
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 20);
+        }
+    }
+
+    /* .form-application__basic */
+    &__basic {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include adaptiveValue("gap", 30, 20);
+
+        @media (max-width:$mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    /* .form-application__address */
+    &__address {}
+
+    /* .form-application__location */
+    &__location {}
+
+    /* .form-application__details */
+    &__details {}
+
+    /* .form-application__subtitle */
+    &__subtitle {
+        padding-left: 10px;
+        color: $grey-4;
+        font-size: rem(16);
+        font-weight: 600;
+        line-height: math.div(24, 16);
+
+        &:not(:last-child) {
+            margin-bottom: rem(8);
+        }
+    }
+
+    /* .form-application__additional */
+    &__additional {}
+
+    /* .form-application__btns */
+    &__btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .form-application__btn */
+    &__btn {
+        padding: 13px 66px;
+        font-size: rem(20);
+        line-height: math.div(32, 20);
+
+        @media (max-width:$mobileSmall) {
+            padding: 13px 26px;
+            width: 100%;
+        }
+    }
+}
+
+.basic-application {
+
+    /* .basic-application__box */
+    &__box {
+        display: flex;
+        flex-direction: column;
+
+        & .form__error {
+            margin-top: rem(6);
+            @include adaptiveValue("padding-left", 10, 0, 0, 1440, 778);
+            color: $redColor;
+        }
+    }
+
+    /* .basic-application__label */
+    &__label {}
+
+    /* .basic-application__input */
+    &__input {
+        &._form-error {
+            box-shadow: 0 0 5px $redColor;
+        }
+    }
+}
+
+.address-application {
+    // display: flex;
+    display: grid;
+    gap: rem(30);
+    grid-template-columns: repeat(1, 1fr);
+
+    @media (min-width:$mobile) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width:$tablet) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* .address-application__box */
+    &__box {
+        // flex: 0 1 rem(345);
+        display: flex;
+        flex-direction: column;
+
+        &_big {
+            @media (min-width:$mobile) {
+                grid-column: span 2;
+            }
+
+            // flex: 0 1 auto;
+            // @include adaptiveValue("flex-basis", 720, 345, 0, 1700, 1024);
+        }
+
+        & .select__body {}
+
+        & ._select-focus {
+            & .select__title {
+                border-color: $primaryBoldColor;
+            }
+
+            & .select__value {
+                padding: 0;
+
+                &::after {
+                    color: $primaryBoldColor;
+                }
+            }
+        }
+
+        & .select__title {
+            padding: 12px;
+            outline: none;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background-color: transparent;
+            transition: all 0.5s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    box-shadow: 0 0 5px $primaryBoldColor;
+                }
+            }
+        }
+
+        & .select__value {
+            padding: 0;
+
+            &::after {
+                content: "\e900";
+                @extend %ic;
+                color: $greyTextColor;
+                font-size: rem(6);
+                line-height: math.div(24, 16);
+            }
+        }
+
+        & .select__content {
+            color: $greyTextColor;
+            font-size: rem(16);
+            line-height: math.div(24, 16);
+        }
+
+        & .select__options {
+            top: rem(55);
+            color: $mainColor;
+            background-color: $bg-card-bg-2;
+            border-color: rgba(255, 255, 255, 0.16);
+        }
+
+        & .select__option {
+            color: $greyTextColor;
+            font-size: rem(16);
+            line-height: math.div(24, 16);
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: $cardBg;
+                }
+            }
+        }
+    }
+
+    /* .address-application__label */
+    &__label {}
+
+    /* .address-application__input */
+    &__input {}
+}
+
+.location-application {
+    display: flex;
+    @include adaptiveValue("gap", 30, 20);
+
+    @media (max-width:$tablet) {
+        flex-direction: column;
+    }
+
+    /* .location-application__box */
+    &__box {
+        @media (min-width:$tablet) {
+            flex: 0 1 49%;
+        }
+    }
+
+    /* .location-application__subtitle */
+    &__subtitle {}
+
+    /* .location-application__options */
+    &__options {
+        display: flex;
+        @include adaptiveValue("gap", 30, 5);
+
+        @media (max-width:$mobileSmall) {
+            flex-direction: column;
+        }
+
+        & .options__item {
+            @media (min-width:$mobile) {
+                flex: 0 1 rem(120);
+            }
+        }
+
+        & .options__label {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.details-application {
+    display: flex;
+    gap: rem(30);
+
+    @media (max-width: 1170px) {
+        flex-direction: column;
+    }
+
+    /* .details-application__box */
+    &__box {
+        @media (min-width: 1171px) {
+            flex: 0 1 rem(720);
+        }
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__files {
+        display: flex;
+        gap: rem(30);
+
+        @media (max-width:$mobileSmall) {
+            flex-direction: column;
+        }
+
+        & .details-application__body {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__subtitle {}
+
+    /* .details-application__label */
+    &__label {
+        position: relative;
+        @include adaptiveValue("padding", 28, 16, 0, 1650, 1300);
+        border-radius: 10px;
+        border: 1px dashed rgba(255, 255, 255, 0.20);
+        transition: all 0.5s ease 0s;
+
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+
+        & * {
+            transition: all 0.5s ease 0s;
+        }
+
+        &._form-error {
+            border-color: $redColor;
+        }
+
+        & .form__error {
+            margin-top: rem(8);
+            color: $redColor;
+            text-align: center;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $primaryBoldColor;
+
+                & * {
+                    color: $primaryBoldColor;
+                }
+            }
+        }
+    }
+
+    /* .details-application__input */
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        font-size: 0;
+        cursor: pointer;
+        transition: all 0.5s ease 0s;
+    }
+
+    /* .details-application__inner */
+    &__inner {}
+
+    /* .details-application__subtitle */
+    &__subtitle {
+        display: block;
+        text-align: center;
+        color: $grey-4;
+        @include adaptiveValue("font-size", 20, 16, 0, 1650, 1300);
+        font-weight: 400;
+        line-height: math.div(32, 20);
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 16, 12);
+        }
+    }
+
+    /* .details-application__conditions */
+    &__conditions {
+        display: block;
+        text-align: center;
+        color: $greyTextColor;
+        @include adaptiveValue("font-size", 14, 12, 0, 1650, 1300);
+        line-height: math.div(20, 14);
+    }
+
+    &__preview {
+        position: relative;
+
+        & img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+
+        &.active {
+            display: inline-block;
+            width: rem(100);
+            height: rem(100);
+            padding: 10px 0 0 0;
+        }
+    }
+
+}
+
+
+.additional-application {
+
+    /* .additional-application__textarea */
+    &__textarea {
+        width: 100%;
+        height: rem(100);
+        padding: 14px;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background-color: transparent;
+        color: $greyTextColor;
+        font-size: rem(16);
+        line-height: math.div(24, 16);
+        resize: none;
+        transition: all 0.5s ease 0s;
+
+        @media (any-hover: hover) {
+            &:focus-visible {
+                border-color: $primaryBoldColor;
+            }
+
+            &:hover {
+                box-shadow: 0 0 5px $primaryBoldColor;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
+.application {
+    &--label {
+        color: $grey-4;
+        font-size: rem(16);
+        font-weight: 600;
+        line-height: math.div(24, 16);
+        @include adaptiveValue("padding-left", 10, 0, 0, 1440, 778);
+
+        &:not(:last-child) {
+            margin-bottom: rem(8);
+        }
+
+        span {
+            color: $redColor;
+        }
+    }
+
+    &--input {
+        padding: rem(14);
+        outline: none;
+        color: $greyTextColor;
+        font-size: rem(16);
+        line-height: math.div(24, 16);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background-color: transparent;
+        transition: all 0.5s ease 0s;
+
+        @media (any-hover: hover) {
+            &:focus-visible {
+                border-color: $primaryBoldColor;
+            }
+
+            &:hover {
+                box-shadow: 0 0 5px $primaryBoldColor;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
+.applications-popup {
+    // overflow: hidden;    
+    /* .applications-popup__wrapper */
+    &__wrapper {}
+
+    /* .applications-popup__content */
+    &__content {
+        position: relative;
+        padding: 0;
+        max-width: 1200px;
+    }
+
+    /* .applications-popup__close */
+    &__close {
+        position: absolute;
+        outline: none;
+        @include adaptiveValue("top", 20, 10);
+        @include adaptiveValue("right", 20, 10);
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 10;
+        path {
+            transition: all 0.5s ease 0s;
+        }
+        @media (any-hover: hover){
+            &:focus-visible,
+            &:hover{
+                path {
+                    fill: $primaryBoldColor;
+                }
+            }
+        }
+    }
+
+    /* .applications-popup__body */
+    &__body {
+        background-color: $bg-main-bg-1;
+    }
+}
+
+.applications-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width:$tablet){
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__main {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+        & img {
+            position: absolute;
+            width: 100%;
+            right: rem(20);
+            bottom: -9px;
+        }
+    }
+    /* .applications-result__block */
+    &__block {
+        padding: 20px;
+        padding-right: 0;
+        @include adaptiveValue("padding-left", 60, 20);
+        @media (max-width:$tablet) {
+            padding-right: rem(20);
+            width: 100%;
+        }
+    }
+
+
+    /* .applications-result__title */
+    &__title {
+        @include adaptiveValue("font-size", 36, 24);
+        @media (max-width:$tablet) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    /* .applications-result__descr */
+    &__descr {
+        color: $greyTextColor;
+        @include adaptiveValue("font-size", 20, 18);
+        line-height: math.div(32, 20);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 80, 40);
+        }
+        @media (max-width:$tablet) {
+            text-align: center;
+        }
+    }
+
+    /* .applications-result__btn */
+    &__btn {
+        padding: 13px 66px;
+        font-size: rem(20);
+        line-height: math.div(32, 20);
+        @media (max-width:$tablet){
+            width: 100%;
+            padding: 12px 24px; 
+        }
+    }
+
+    /* .applications-result__media */
+    &__media {
+        padding: 20px;
+        @include adaptiveValue("padding-right", 60, 20);
+        background: rgba(27, 112, 241, 0.04);
+        @media (min-width:$tablet){
+            flex: 0 1 60%;
+        }
+        @media (max-width:$tablet){
+            @include adaptiveValue("height", 800, 310, 0, 991, 320);
+            width: 100%;
+        }
+    }
+
+    /* .applications-result__img-ibg */
+    &__img-ibg {
+        padding-bottom: percent(745, 885);
+    }
+}

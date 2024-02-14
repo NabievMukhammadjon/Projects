@@ -1,0 +1,15 @@
+.title {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: red;
+    text-transform: uppercase;
+}
+.descr {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}

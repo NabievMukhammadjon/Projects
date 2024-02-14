@@ -1,0 +1,120 @@
+.metaData {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 10px;
+    line-height: 12px;
+    margin-right: 4px;
+}
+  
+.createdAt,
+.createdAt span {
+    color: var(--grey99);
+  }
+  
+@media all and (min-width: 1024px) {  
+    .metaData {
+      font-size: 14px;
+      line-height: 16px;
+    }
+}  
+
+.userLink {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 20px;
+    padding: 0 6px 0 0;
+}
+  
+.avatar {
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    margin: 0 7px 0 0;
+}
+  
+.username {
+    color: var(--orange);
+    position: relative;
+    z-index: 1;
+}
+  
+@media all and (min-width: 1024px) {
+    .userLink {
+      padding: 0 0 0 5px;
+    }
+}
+  
+@media all and (min-width: 1540px) {
+    .userLink:hover a {
+      text-decoration: underline;
+    }
+}
+
+.league {
+    display: inline-block;
+}
+.league__btn {
+    color: var(--black);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 2px 10px;
+    background-color: var(--greyD9);
+}
+.descr {
+
+}
+.user {
+    
+}
+
+.icons {
+    position: relative;
+}
+.icons svg {
+    position: relative;
+    z-index: 100;
+}
+.icons::before {
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 24px;
+    background-color: #fff;
+    z-index: 10;
+}
+.icons::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    top: 0px;
+    left: 10px;
+    background-color: #D9D9D9;
+    z-index: 9;
+}
+.userComments {
+    display: flex;
+    gap: 22px;
+
+}
+.buttons {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.button {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 5px;
+
+}
+.commentsForm {
+    
+}

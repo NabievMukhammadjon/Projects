@@ -1,0 +1,21 @@
+.button {
+  padding: 14px 42px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #333;
+  background-color: var(--greyD9);
+  border: 1px solid #333;
+  transition: all 0.5s ease 0s;
+}
+.button:hover,
+.button:focus-visible {
+  background-color: var(--greyC4);
+}
+
+@media all and (min-width: 1024px) {
+    .cardsList {
+      padding: 40px 0;
+    }
+}
+  

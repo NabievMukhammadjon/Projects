@@ -1,0 +1,343 @@
+.page-articles {
+
+    /* .page-articles__hero */
+    &__hero {
+        @include adaptiveValue("padding-top", 120, 60);
+        @include adaptiveValue("padding-bottom", 80, 20);
+        background-color: $bg-main-bg-1;
+
+        @media (max-width:$tablet) {
+            display: none;
+        }
+    }
+    &__cards {
+        @include adaptiveValue("padding-bottom", 120, 60);
+        background-color: $bg-main-bg-1;
+    }
+}
+
+.hero-articles {
+
+    /* .hero-articles__container */
+    &__container {}
+
+    /* .hero-articles__slider */
+    &__slider {}
+
+    /* .hero-articles__wrapper */
+    &__wrapper {}
+
+    /* .hero-articles__slide */
+    &__slide {
+        display: flex;
+        background-color: $bgColor-2;
+        gap: rem(60);
+        @include adaptiveValue("padding", 40, 20, 0, 1700, 1024);
+    }
+
+    /* .hero-articles__inner */
+    &__inner {
+        max-width: rem(710);
+        @include adaptiveValue("width", 710, 590, 0, 1700, 1024);
+    }
+
+    /* .hero-articles__image-ibg */
+    &__image-ibg {
+        flex: 1 1 auto;
+        // padding-bottom: percent(520, 1590);
+        padding-bottom: percent(440, 1590);
+    }
+
+    /* .hero-articles__dotts */
+    &__dotts {}
+}
+
+.slide-articles {
+    @include adaptiveValue("margin-top", 40, 20, 0, 1700, 1024);
+
+    /* .slide-articles__authors */
+    &__authors {
+        position: relative;
+        @include adaptiveValue("margin-bottom", 20, 10);
+        @include adaptiveValue("padding-bottom", 20, 10);
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            opacity: 0.1;
+            background: #FFF;
+        }
+    }
+
+    /* .slide-articles__name */
+    &__name {
+        position: relative;
+        display: inline-block;
+        color: $greyTextColor;
+        @include adaptiveValue("font-size", 18, 16, 0, 1700, 1024);
+        line-height: math.div(28, 18);
+        margin-right: 12px;
+        padding-right: 12px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            opacity: 0.2;
+            background: $mainColor;
+        }
+    }
+
+    /* .slide-articles__readers */
+    &__readers {
+        color: $greyTextColor;
+        @include adaptiveValue("font-size", 18, 16, 0, 1700, 1024);
+        line-height: math.div(28, 18);
+    }
+
+    /* .slide-articles__title */
+    &__title {
+        @include adaptiveValue("font-size", 36, 20);
+        font-weight: 600;
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 30, 20);
+        }
+    }
+
+    /* .slide-articles__descr */
+    &__descr {
+        color: $greyTextColor;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(28, 18);
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 30);
+        }
+    }
+
+    /* .slide-articles__link */
+    &__link {
+        display: inline-flex;
+        gap: rem(4);
+        outline: none;
+        padding: 13px 26px;
+        @include adaptiveValue("font-size", 18, 16);
+        line-height: math.div(28, 18);
+        align-items: center;
+        transition: all 0.5s ease 0s;
+        border-radius: rem(4);
+
+        span {
+            order: -1;
+        }
+
+        @media (any-hover: hover) {
+            &:focus-visible {
+                border: 1px solid $mainColor;
+            }
+
+            &:hover {
+                background-color: $mainColor;
+                color: $primaryBoldColor;
+            }
+        }
+
+    }
+}
+
+//========================================================================================================================================================
+.articles-card {
+    @media (max-width:$tablet){
+        padding-top: rem(40);
+    }
+    /* .articles-card__container */
+    &__container {}
+
+    /* .articles-card__head */
+    &__head {}
+
+    /* .articles-card__body */
+    &__body {}
+}
+
+.head-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20);
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 60, 40);
+    }
+    /* .head-cards__list */
+    &__list {
+        display: flex;
+        gap: rem(20);
+        @media (max-width:$mobile){
+            width: 100%;
+            justify-content: space-between;
+            overflow: auto;
+        }
+    }
+
+    /* .head-cards__item */
+    &__item {
+    }
+    
+    /* .head-cards__btn */
+    &__btn {
+        padding: rem(4);
+        outline: none;
+        color: $greyTextColor;
+        font-size: rem(20);
+        line-height: math.div(32, 20);
+        transition: all 0.5s ease 0s;
+        @media (any-hover: hover){
+            &:focus-visible{
+                color: $primaryBoldColor;
+            }
+            &:hover{
+                color: $mainColor;
+            }
+        }
+    }
+
+    /* .head-cards__link */
+    &__link {
+        padding: 10px 16px;
+        color: $grey-4;
+        font-size: 16px;
+        line-height: math.div(24, 16);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        transition: all 0.5s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                border-color: $primaryBoldColor;
+                color: $primaryBoldColor;
+                background-color: $mainColor;
+            }
+        }
+        @media (max-width:$mobile){
+            display: none; 
+        }
+    }
+}
+
+.body-cards {
+    
+    /* .body-cards__list */
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include adaptiveValue("column-gap", 30, 20);
+        @include adaptiveValue("row-gap", 40, 20);
+        @include adaptiveValue("margin-bottom", 60, 40);
+        @media (max-width: 1260px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width:$mobile){
+            grid-template-columns: repeat(1, 1fr); 
+        }
+    }
+
+    /* .body-cards__item */
+    &__link {
+        border-radius: 6px;
+        border: 1px solid $cardBg;
+        @include adaptiveValue("padding", 30, 20);
+        outline: none;
+        transition: all 0.5s ease 0s;
+        @media (any-hover: hover){
+            &:focus-visible{
+                box-shadow: 0 4px 16px $primaryBoldColor;
+            }
+            &:hover{
+                box-shadow: 0 4px 16px rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+
+    /* .body-cards__image-ibg */
+    &__image-ibg {
+        padding-bottom: percent(320, 450);
+    }
+
+    /* .body-cards__texts */
+    &__texts {
+        margin-top: rem(40);
+    }
+
+    &__icon {
+        @include adaptiveValue("margin-right", 10, 6);
+        @include adaptiveValue("width", 72, 24);
+        @include adaptiveValue("height", 72, 24);
+    }
+    /* .body-cards__author */
+    &__author {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 40, 20);
+        }
+    }
+
+    /* .body-cards__name */
+    &__name {
+        position: relative;
+        display: block;
+        margin-right: auto;
+        color: $greyTextColor;
+        @include adaptiveValue("font-size", 16, 14);
+        line-height: math.div(24, 16);
+        @media (min-width:$tablet){
+            margin-right: 12px;
+            padding-right: 12px;
+            &::after{
+                content:'';
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                top: 0;
+                right: 0;
+                opacity: 0.2;
+                background: #FFF;
+            }
+        }
+    }
+
+    /* .body-cards__readers */
+    &__readers {
+        display: block;
+        color: $greyTextColor;
+        @include adaptiveValue("font-size", 16, 14);
+        line-height: math.div(24, 16);
+    }
+
+    /* .body-cards__subtitle */
+    &__subtitle {
+        color: $grey-2;
+        @include adaptiveValue("font-size", 32, 20);
+        font-weight: 600;
+    }
+
+    /* .body-cards__btns */
+    &__btns {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+
+    /* .body-cards__btn */
+    &__btn {
+        padding: 18px 81px;
+        font-size: 20px;
+        line-height: math.div(32, 20);
+    }
+}

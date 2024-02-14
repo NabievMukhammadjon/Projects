@@ -1,0 +1,24 @@
+.container {
+    /* width: 100%;
+    flex: 1 1 0%; */
+}
+
+.listContainer {
+    /* position: absolute; */
+    max-width: 160px;
+    width: 100%;
+    height: 100%;
+    left: 56%;
+    top: 70%;
+}
+
+.list {
+
+}
+
+.dropdown {
+    border-radius: 3px;
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+ 
