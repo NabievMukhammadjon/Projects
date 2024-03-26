@@ -3,6 +3,8 @@ import React, { createContext, useState } from 'react';
 export const TimerContext = createContext<any>({});
 
 export const TimerProvider = ({ children }: any) => {
+    
+
     const [seconds, setSeconds] = useState(15);
     const [minutes, setMinutes] = useState(1);
     const [isRunning, setIsRunning] = useState(false);

@@ -1,6 +1,7 @@
 .inner {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     align-items: center;
     background-color: var(--greyLight);
     padding: 70px 0 107px;
@@ -44,9 +45,6 @@
 .btnAdd:hover {
     background-color: var(--green);
 }
-.task {
-    margin-bottom: 32px;
-}
 .name {
     display: inline-block;
     color: var(--greyBold);
@@ -89,4 +87,12 @@
 .btnGreen:focus-visible,
 .btnGreen:hover {
     background-color: var(--green);
+}
+.btnRed:disabled {
+    cursor: auto;
+    color: #C4C4C4;
+    border-color: #C4C4C4;
+}
+.btnRed:disabled:hover {
+    background-color: transparent;   
 }

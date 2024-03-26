@@ -31,3 +31,7 @@
 .button:hover {
     background-color: var(--green);
 }
+
+.list {
+    margin-top: 25px;
+}

@@ -8,9 +8,10 @@ export function Timer() {
   return (
     <div className={styles.timer}>
       <TimerHead />
-      <TimerProvider>
+      {/* <TimerProvider>
         <TimerInner />
-      </TimerProvider>
+      </TimerProvider> */}
+      <TimerInner />
     </div>
   );
 }
