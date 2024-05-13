@@ -4,36 +4,37 @@
 	"title":"HomePage"
 	})
 	<body>
+		@@include('html/_preloader.htm',{})
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page pahe__home">
 				<section class="page__main-block main-block">
 					<div class="main-block__slider">
 						<div class="main-block__swiper">
-							<div class="main-block__slide slide-main-block slide-main-block_bg-1">
+							<div data-aos="zoom-in" data-aos-delay="200" class="main-block__slide slide-main-block slide-main-block_bg-1">
 								<div class="slide-main-block__container">
 									<div class="slide-main-block__body">
 										<h2 data-swiper-parallax="-100" class="slide-main-block__title">Скидка&nbsp;15%</h2>
 										<div data-swiper-parallax="-120" class="slide-main-block__subtitle">на&nbsp;первую покупку</div>
-										<a data-swiper-parallax="-200" href="#" class="slide-main-block__button btn-site button">Получить!</a>
+										<a data-da=".thumbs-main-block__slide_1, 636.98" data-swiper-parallax="-200" href="#" class="slide-main-block__button btn-site button"><span>Получить!</span></a>
 									</div>
 								</div>
 							</div>
-							<div class="main-block__slide slide-main-block slide-main-block_bg-2">
+							<div data-aos="zoom-in" data-aos-delay="200" class="main-block__slide slide-main-block slide-main-block_bg-2">
 								<div class="slide-main-block__container">
 									<div class="slide-main-block__body">
 										<h2 data-swiper-parallax="-100" class="slide-main-block__title">1000+ аксессуаров</h2>
 										<div data-swiper-parallax="-120" class="slide-main-block__subtitle">для дома</div>
-										<a data-swiper-parallax="-200" href="#" class="slide-main-block__button btn-site button">Подробнее</a>
+										<a data-da=".thumbs-main-block__slide_2, 636.98" data-swiper-parallax="-200" href="#" class="slide-main-block__button btn-site button"><span>Подробнее</span></a>
 									</div>
 								</div>
 							</div>
-							<div class="main-block__slide slide-main-block slide-main-block_bg-3">
+							<div data-aos="zoom-in" data-aos-delay="200" class="main-block__slide slide-main-block slide-main-block_bg-3">
 								<div class="slide-main-block__container">
 									<div class="slide-main-block__body">
 										<h2 data-swiper-parallax="-100" class="slide-main-block__title slide-main-block__title_white">Коллекция стильного</h2>
 										<div data-swiper-parallax="-120" class="slide-main-block__subtitle slide-main-block__subtitle_white">и&nbsp;яркого текстиля</div>
-										<a data-swiper-parallax="-200" href="#" class="slide-main-block__button btn-site button">Подробнее</a>
+										<a data-da=".thumbs-main-block__slide_3, 636.98" data-swiper-parallax="-200" href="#" class="slide-main-block__button btn-site button"><span>Подробнее</span></a>
 									</div>
 								</div>
 							</div>							
@@ -42,50 +43,58 @@
 							<div class="controll-main-block__dotts"></div>
 						</div>
 					</div>
-					<div class="main-block__stock stock-main-block">
-						<div class="stock-main-block__container"></div>
+					<div class="main-block__thumbs thumbs-main-block">
+						<div class="thumbs-main-block__container">
+							<div class="thumbs-main-block__slider">
+								<div class="thumbs-main-block__swiper">
+									<div data-swiper-parallax="-300" class="thumbs-main-block__slide thumbs-main-block__slide_1"></div>
+									<div data-swiper-parallax="-300" class="thumbs-main-block__slide thumbs-main-block__slide_2"></div>
+									<div data-swiper-parallax="-300" class="thumbs-main-block__slide thumbs-main-block__slide_3"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 				<section class="page__special-offer special-offer">
 					<div class="special-offer__container">
 						<div class="special-offer__content">
-							<h3 class="special-offer__title">Специальные предложения</h3>
-							<div class="special-offer__controll">
-								<div class="special-offer__prev">
+							<h3 data-aos="fade-right" data-aos-delay="100" class="special-offer__title">Специальные предложения</h3>
+							<div data-aos="zoom-in" data-delay="150" class="special-offer__controll">
+								<button class="special-offer__prev">
 									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M6 1L1 6L6 11" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>																		
-								</div>
-								<div class="special-offer__next">
+								</button>
+								<button class="special-offer__next">
 									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>										
-								</div>
+								</button>
 							</div>
 						</div>
 						<div class="special-offer__slider">
 							<div class="special-offer__swiper">
-								<div class="special-offer__slide">
+								<div data-aos="fade-up" data-aos-delay="200" class="special-offer__slide">
 									<article class="special-products-card">
-										<a href="product.html" class="special-products-card__image" target="_blank">
+										<a href="product.html" class="special-products-card__image">
 											<img src="@img/speciall-offer/specialOffer_armChair_X-24.png" alt="Картинка">
 										</a>
 										<div class="special-products-card__body">
 											<h4 class="special-products-card__title">
-												<a href="product.html" class="special-products-card__link-title" target="_blank">Кресло велюровое “X-24”</a>
+												<a href="product.html" class="special-products-card__link-title">Кресло велюровое “X-24”</a>
 											</h4>
 											<div class="special-products-card__footer">
 												<div class="special-products-card__discount">15 990 руб</div>
 												<div class="special-products-card__price">24 990 руб</div>
 											</div>
-											<button class="special-products-card__cart button btn-by">Купить</button>
+											<button class="special-products-card__cart button btn-by"><span>Купить</span></button>
 										</div>
 										<div class="special-products-card__sale">- 9 000</div>
 									</article>
 								</div>
-								<div class="special-offer__slide special-offer__slide_big">
+								<div data-aos="fade-up" data-aos-delay="200" class="special-offer__slide special-offer__slide_big">
 									<article class="special-products-card">
-										<a href="product.html" class="special-products-card__image" target="_blank">
+										<a href="product.html" class="special-products-card__image">
 											<picture>
 												<source srcset="@img/speciall-offer/specialOffer_sofa_Z-44.png" media="(min-width: 1350px)">
 												<source srcset="@img/speciall-offer/specialOffer_sofa_Z-44_mobile.png" media="(max-width: 1349px)">
@@ -94,56 +103,56 @@
 										</a>
 										<div class="special-products-card__body">
 											<h4 class="special-products-card__title">
-												<a href="product.html" class="special-products-card__link-title" target="_blank">Диван тканевый “Z-44”</a>
+												<a href="product.html" class="special-products-card__link-title">Диван тканевый “Z-44”</a>
 											</h4>
 											<div class="special-products-card__footer">
 												<div class="special-products-card__discount">22 990 руб</div>
 												<div class="special-products-card__price">32 990 руб</div>
 											</div>
-											<button class="special-products-card__cart button btn-by">Купить</button>
+											<button class="special-products-card__cart button btn-by"><span>Купить</span></button>
 										</div>
 										<div class="special-products-card__sale">- 9 000</div>
 									</article>
 								</div>
-								<div class="special-offer__slide">
+								<div data-aos="fade-up" data-aos-delay="200" class="special-offer__slide">
 									<article class="special-products-card">
-										<a href="product.html" class="special-products-card__image" target="_blank">
+										<a href="product.html" class="special-products-card__image">
 											<img src="@img/speciall-offer/specialOffer_Clock.png" alt="Картинка">
 										</a>
 										<div class="special-products-card__body">
 											<h4 class="special-products-card__title">
-												<a href="product.html" class="special-products-card__link-title" target="_blank">Будильник  “Quartz-23”</a>
+												<a href="product.html" class="special-products-card__link-title">Будильник  “Quartz-23”</a>
 											</h4>
 											<div class="special-products-card__footer">
 												<div class="special-products-card__discount">1 290 руб</div>
 												<div class="special-products-card__price">1 890 руб</div>
 											</div>
-											<button class="special-products-card__cart button btn-by">Купить</button>
+											<button class="special-products-card__cart button btn-by"><span>Купить</span></button>
 										</div>
 										<div class="special-products-card__sale">- 9 000</div>
 									</article>
 								</div>
-								<div class="special-offer__slide">
+								<div data-aos="fade-up" data-aos-delay="200" class="special-offer__slide">
 									<article class="special-products-card">
-										<a href="product.html" class="special-products-card__image" target="_blank">
+										<a href="product.html" class="special-products-card__image">
 											<img src="@img/speciall-offer/specialOffer_Dear.png" alt="Картинка">
 										</a>
 										<div class="special-products-card__body">
 											<h4 class="special-products-card__title">
-												<a href="product.html" class="special-products-card__link-title" target="_blank">Мини-скульптура “Oh my deer”</a>
+												<a href="product.html" class="special-products-card__link-title">Мини-скульптура “Oh my deer”</a>
 											</h4>
 											<div class="special-products-card__footer">
 												<div class="special-products-card__discount">690 руб</div>
 												<div class="special-products-card__price">990 руб</div>
 											</div>
-											<button class="special-products-card__cart button btn-by">Купить</button>
+											<button class="special-products-card__cart button btn-by"><span>Купить</span></button>
 										</div>
 										<div class="special-products-card__sale">- 9 000</div>
 									</article>
 								</div>
-								<div class="special-offer__slide special-offer__slide_big">
+								<div data-aos="fade-up" data-aos-delay="200" class="special-offer__slide special-offer__slide_big">
 									<article class="special-products-card">
-										<a href="product.html" class="special-products-card__image" target="_blank">
+										<a href="product.html" class="special-products-card__image">
 											<picture>
 												<source srcset="@img/speciall-offer/specialOffer_sofa_Z-85.png" media="(min-width: 1350px)">
 												<source srcset="@img/speciall-offer/specialOffer_sofa_Z-85_mobile.png" media="(max-width: 1349px)">
@@ -152,31 +161,31 @@
 										</a>
 										<div class="special-products-card__body">
 											<h4 class="special-products-card__title">
-												<a href="product.html" class="special-products-card__link-title" target="_blank">Диван вел-флок “Z-85”</a>
+												<a href="product.html" class="special-products-card__link-title">Диван вел-флок “Z-85”</a>
 											</h4>
 											<div class="special-products-card__footer">
 												<div class="special-products-card__discount">22 990 руб</div>
 												<div class="special-products-card__price">32 990 руб</div>
 											</div>
-											<button class="special-products-card__cart button btn-by">Купить</button>
+											<button class="special-products-card__cart button btn-by"><span>Купить</span></button>
 										</div>
 										<div class="special-products-card__sale">- 9 000</div>
 									</article>
 								</div>
-								<div class="special-offer__slide">
+								<div data-aos="fade-up" data-aos-delay="200" class="special-offer__slide">
 									<article class="special-products-card">
-										<a href="product.html" class="special-products-card__image" target="_blank">
+										<a href="product.html" class="special-products-card__image">
 											<img src="@img/speciall-offer/specialOffer_termometr.png" alt="Картинка">
 										</a>
 										<div class="special-products-card__body">
 											<h4 class="special-products-card__title">
-												<a href="product.html" class="special-products-card__link-title" target="_blank">Термометр + гидрометр “H-18”</a>
+												<a href="product.html" class="special-products-card__link-title">Термометр + гидрометр “H-18”</a>
 											</h4>
 											<div class="special-products-card__footer">
 												<div class="special-products-card__discount">1 390 руб</div>
 												<div class="special-products-card__price">2 090 руб</div>
 											</div>
-											<button class="special-products-card__cart button btn-by">Купить</button>
+											<button class="special-products-card__cart button btn-by"><span>Купить</span></button>
 										</div>
 										<div class="special-products-card__sale">- 9 000</div>
 									</article>
@@ -190,14 +199,14 @@
 						"title":"Высокий рейтинг"
 					})
 				</section>
-				<section class="page__new-collection new-collection">
+				<section class="page__new-collection new-collection"> 
 					<div class="new-collection__inner">
 						<div class="new-collection__container">
-							<h1 class="new-collection__title">
+							<h1 data-aos="fade-right" data-aos-delay="100" class="new-collection__title">
 								<span>Оксфорд 1950</span>
 								Новая коллекция изысканных кресел 
 							</h1>
-							<a data-da=".stock-block__container, 636.98" href="#" class="new-collection__link button btn-site"><span>Ознакомиться</span></a>
+							<a data-aos="fade-right" data-aos-delay="150" data-da=".stock-block__container, 636.98" href="#" class="new-collection__link button btn-site"><span>Ознакомиться</span></a>
 						</div>
 					</div>
 					<div class="new-collection__stock-block stock-block">
@@ -212,23 +221,23 @@
 				<section class="page__usefuls-articles usefuls-articles">
 					<div class="usefuls-articles__container">
 						<div class="usefuls-articles__content">
-							<h3 class="usefuls-articles__title">Специальные предложения</h3>
-							<div class="usefuls-articles__controll">
-								<div class="usefuls-articles__prev">
+							<h3 data-aos="fade-right" data-aos-delay="100" class="usefuls-articles__title">Полезное</h3>
+							<div data-aos="zoom-in" data-aos-delay="100" class="usefuls-articles__controll">
+								<button class="usefuls-articles__prev">
 									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M6 1L1 6L6 11" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>																		
-								</div>
-								<div class="usefuls-articles__next">
+								</button>
+								<button class="usefuls-articles__next">
 									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>										
-								</div>
+								</button>
 							</div>
 						</div>
-						<div class="usefuls-articles__slider">
+						<div class="usefuls-articles__slider"> 
 							<div class="usefuls-articles__swiper">
-								<div class="usefuls-articles__slide">
+								<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="usefuls-articles__slide">
 									<article class="usefuls-card">
 										<div class="usefuls-card__image-ibg">
 											<img src="@img/usefuls/useful-1.jpg" alt="Картина">
@@ -237,11 +246,11 @@
 											<p class="usefuls-card__descr">
 												И&nbsp;нет сомнений, что сделанные на&nbsp;базе интернет-аналитики выводы представляют собой не&nbsp;что иное?
 											</p>
-											<a href="#" class="usefuls-card__link button btn-by">Читать</a>
+											<a href="#" class="usefuls-card__link button btn-by"><span>Читать</span></a>
 										</div>
 									</article>
 								</div>
-								<div class="usefuls-articles__slide">
+								<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="usefuls-articles__slide">
 									<article class="usefuls-card">
 										<div class="usefuls-card__image-ibg">
 											<img src="@img/usefuls/useful-2.jpg" alt="Картина">
@@ -250,11 +259,11 @@
 											<p class="usefuls-card__descr">
 												Как принято считать, некоторые особенности приносят несомненную пользу обществу?
 											</p>
-											<a href="#" class="usefuls-card__link button btn-by">Читать</a>
+											<a href="#" class="usefuls-card__link button btn-by"><span>Читать</span></a>
 										</div>
 									</article>
 								</div>
-								<div class="usefuls-articles__slide">
+								<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="usefuls-articles__slide">
 									<article class="usefuls-card">
 										<div class="usefuls-card__image-ibg">
 											<img src="@img/usefuls/useful-3.jpg" alt="Картина">
@@ -263,11 +272,11 @@
 											<p class="usefuls-card__descr">
 												Ясность нашей позиции очевидна: укрепление и&nbsp;развитие внутренней структуры?
 											</p>
-											<a href="#" class="usefuls-card__link button btn-by">Читать</a>
+											<a href="#" class="usefuls-card__link button btn-by"><span>Читать</span></a>
 										</div>
 									</article>
 								</div>
-								<div class="usefuls-articles__slide">
+								<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="usefuls-articles__slide">
 									<article class="usefuls-card">
 										<div class="usefuls-card__image-ibg">
 											<img src="@img/usefuls/useful-4.jpg" alt="Картина">
@@ -276,11 +285,11 @@
 											<p class="usefuls-card__descr">
 												Прежде всего, консультация с&nbsp;широким активом однозначно фиксирует необходимость распределения?
 											</p>
-											<a href="#" class="usefuls-card__link button btn-by">Читать</a>
+											<a href="#" class="usefuls-card__link button btn-by"><span>Читать</span></a>
 										</div>
 									</article>
 								</div>
-								<div class="usefuls-articles__slide">
+								<div data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="usefuls-articles__slide">
 									<article class="usefuls-card">
 										<div class="usefuls-card__image-ibg">
 											<img src="@img/usefuls/useful-5.jpg" alt="Картина">
@@ -289,7 +298,7 @@
 											<p class="usefuls-card__descr">
 												Как принято считать, некоторые особенности приносят несомненную пользу обществу?
 											</p>
-											<a href="#" class="usefuls-card__link button btn-by">Читать</a>
+											<a href="#" class="usefuls-card__link button btn-by"><span>Читать</span></a>
 										</div>
 									</article>
 								</div>
@@ -300,25 +309,32 @@
 				<section class="page__request request-form">
 					<div class="request-form__container">
 						<div class="request-form__content">
-							<h3 class="request-form__title">Мы всегда вам рады!</h3>
-							<p class="request-form__descr">
+							<h3 data-aos="fade-right" data-aos-delay="100" class="request-form__title">Мы всегда вам рады!</h3>
+							<div data-aos="fade-right" data-aos-delay="200" class="request-form__descr">
 								Безусловно, новая модель организационной деятельности в&nbsp;значительной степени обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
-							</p>
-							<form action="#" class="request-form__body home-form">
-								<input class="home-form__input" type="text" id="homeInputName" name="name" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="Как вас зовут?">
-								<input class="home-form__input" type="tel" id="homeInputPhone" name="phone" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="Ваш телефон">
-								<input class="home-form__input" type="email" id="homeInputEmail" name="email" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="Ваш e-mail">
-								<div class="home-form__btns">
-									<button type="submit" class="home-form__button button btn-site">Отправить</button>
-									<input type="checkbox" id="homeInputCheckbox" class="home-form__checkbox checkbox__input" value="1" name="form[]" data-error="Ошибка" checked>
-									<label for="homeInputCheckbox" class="checkbox__label home-form__label">
+								<button data-tippy-content="Реплицированные с зарубежных источников, исследования формируют глобальную сеть." class="request-form__descr-icon _icon-question"></button>
+							</div>
+							<form action="#" class="request-form__body home-form form" data-dev data-goto-error data-popup-message="#form-message">
+								<label for=	"homeInputName" class="home-form__label">
+									<input data-aos="fade-up" data-aos-delay="100" id="homeInputName" class="home-form__input" type="text" name="name" autocomplete="off" data-error="Недопустимый формат" placeholder="Как вас зовут?" data-required data-validate>
+								</label>
+								<label for="homeInputName" class="home-form__label">
+									<input data-aos="fade-up" data-aos-delay="150" id="homeInputPhone" class="home-form__input" type="tel" name="tel" autocomplete="off" data-error="Ошибка" placeholder="Ваш телефон" data-required="tel">
+								</label>
+								<label for="homeInputEmail" class="home-form__label">
+									<input data-aos="fade-up" data-aos-delay="200" id="homeInputEmail" class="home-form__input" type="text" name="email" autocomplete="off" data-error="Ошибка" placeholder="Ваш e-mail" data-required="email">
+								</label>
+								<div class="home-form__btns btns-home-form">
+									<button data-aos="fade-up" data-aos-delay="250" type="submit" class="btns-home-form__button button btn-site"><span>Отправить</span></button>
+									<input type="checkbox" id="homeInputCheckbox" class="btns-home-form__checkbox checkbox__input" value="1" name="form[]" data-error="Ошибка" checked>
+									<label data-aos="fade-up" data-aos-delay="300" for="homeInputCheckbox" class="checkbox__label btns-home-form__label">
 										<span class="checkbox__text">Принимаю <a href="#">пользовательское соглашение</a></span>
 									</label>
 								</div>
 							</form>
 						</div>
 						<div class="request-form__image">
-							<span class="request-form__item-image-ibg">
+							<span data-aos="fade-left" data-delay="300" class="request-form__item-image-ibg">
 								<picture>
 									<source srcset="@img/request-form/form-icon.png" media="(min-width: 893px)">
 									<source srcset="@img/request-form/form-icon_mobile.png" media="(max-width: 892px)">
@@ -333,6 +349,7 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
 		@@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>

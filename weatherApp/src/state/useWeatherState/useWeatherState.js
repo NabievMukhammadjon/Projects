@@ -9,7 +9,8 @@ export const useWeatherState = create((set, get) => ({
   listResponse: null,
   thisCity: null,
 
-	getWeather: async (city) => {
+  getWeather: async (city) => {
+    // console.log(city);
 		set({ isLoading: true, isError: false });
 		try {
 			const response = await getCityWeather(city.lat, city.lon);
@@ -21,7 +22,7 @@ export const useWeatherState = create((set, get) => ({
 			return set({ isLoading: false, isError: true });
 		}
 		set({ isLoading: false, isError: false });
-	},
+  },
 
   setThisCity: (city) => set({thisCity: city})
 }));

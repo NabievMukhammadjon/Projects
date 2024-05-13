@@ -7,7 +7,7 @@ export function InputSearch() {
 		<input
 			className="input"
 			type="search"
-			placeholder="Москва"
+			placeholder="Ташкент"
 			name="search"
       autoComplete='off'
 			id="search"

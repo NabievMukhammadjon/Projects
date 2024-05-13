@@ -8,6 +8,7 @@ import { Loader } from '../../components/Loader';
 
 export function Sidebar() {
 	const { response, thisCity, isLoading } = useWeatherState((state) => state);
+  
 	return (
 		<aside id="side-bar" className="side-bar">
 			<ThemeSwitcher />

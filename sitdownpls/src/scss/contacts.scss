@@ -1,0 +1,152 @@
+.contacts {
+    margin-bottom: rem(70);
+    // .contacts__container
+    &__container {
+    }
+    // .contacts__title
+    &__title {
+        font-size: rem(32);
+        line-height: math.div(32, 32);
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+    // .contacts__form
+    &__form {
+        position: relative;
+        display: flex;
+        gap: rem(32);
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+    // .contacts__label
+    &__label {
+        position: relative;
+        flex: 0 1 rem(624);
+        .form__error {
+            position: absolute;
+            bottom: rem(-10);
+            left: rem(18);
+            color: red;
+        }
+    }
+    // .contacts__input
+    &__input {
+        width: 100%;
+        padding: rem(7) rem(18);
+        font-size: rem(16);
+        line-height: math.div(40, 16);
+        background-color: #f6f6f6;
+        border-radius: rem(10);
+        transition: all .3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #EAEAEA;       
+            }
+            &:focus-visible {
+                outline: 1px solid $mainPrimary;
+                background-color: #F8EFFF;       
+                
+            }
+            
+        }
+    }
+    // .contacts__button
+    &__button {
+        padding: rem(19) rem(35);
+    }
+    // .contacts__map
+    &__map {
+        width: 100%;
+        height: rem(510);
+        border-radius: rem(10);
+        background-color: $mainGreyLight;
+        & * {
+            border-radius: rem(10);
+        }
+    }
+}
+.home-form {
+    
+    // .home-form__input
+    &__input {
+    }
+}
+//====================================================================================================
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+[class*="balloon__content"] {
+    ymaps {
+        width: 100% !important;
+        max-width: 280px;
+        height: auto !important;
+    }
+}
+.ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
+    width: rem(343);
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding: rem(30);
+    padding-right: rem(30) !important;
+}
+
+//====================================================================================================
+.balloon {
+
+    // .balloon__top
+
+    &__top {
+    }
+    // .balloon__title
+    &__title {
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: math.div(16, 16);
+        &:not(:last-child) {
+            margin-bottom: rem(7);
+        }
+    }
+    // .balloon__address
+    &__address {
+        line-height: math.div(25, 14);
+        &:not(:last-child) {
+            margin-bottom: rem(8);
+        }
+    }
+    // .balloon__link
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: rem(3);
+        color: $mainSecondary;
+    }
+    // .balloon__contacts
+    &__contacts {
+        margin-bottom: rem(13);
+        
+    }
+    // .balloon__center
+    &__center {
+    }
+    // .balloon__paragraph-center
+    &__paragraph-center {
+        border-top: 1px solid $mainGreyLight;
+        border-bottom: 1px solid $mainGreyLight;
+        padding: rem(13) 0;
+        color: $mainGrey;
+        line-height: math.div(25, 14);
+    }
+    // .balloon__paragraph
+    &__paragraph {
+        color: $mainGrey;
+        line-height: math.div(25, 14);
+    }
+    // .balloon__text
+    &__text {
+        color: $mainColor;
+    }
+}
+
+//====================================================================================================

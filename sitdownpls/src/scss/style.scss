@@ -44,7 +44,7 @@ $maxWidth: 1920;
 $maxWidthContainer: 1280;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 30;
+$containerPadding: 24;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -71,13 +71,18 @@ $responsiveType: 1;
 body {
 	font-weight: 400;
 	// Скролл заблокирован
-	.lock & {
-		overflow: hidden;
-		touch-action: none;
-		overscroll-behavior: none;
-	}
+	// .lock & {
+	// 	overflow: hidden;
+	// 	touch-action: none;
+	// 	overscroll-behavior: none;
+	// }
 	// Сайт загружен
 	.loaded & {
+		.preloader {
+			visibility: hidden;
+			opacity: 0;
+			z-index: -1;
+		}
 	}
 	a,
 	button {
@@ -165,6 +170,7 @@ body {
 @import "home";
 @import "catalog";
 @import "product";
+@import "contacts";
 
 // ====================================================================================
 .header {

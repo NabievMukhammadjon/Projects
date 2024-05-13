@@ -127,7 +127,8 @@
 	cursor: ns-resize;
 }
 .noUi-handle {
-	background-color: $mainPrimary;
+	// background-color: $mainPrimary;
+	transform: rotate(-180deg);
 	box-shadow: 0 4px 20px rgba(232, 170, 49, .3);	
 	// background: green;
 	border-radius: 10px;
@@ -256,9 +257,10 @@
 	white-space: nowrap;
 }
 .noUi-horizontal .noUi-tooltip {
-	transform: translate(-50%, 0);
+	transform: translate(-50%, 0) rotate(-180deg);
 	left: 50%;
-	bottom: 220%;
+	// bottom: 220%;
+	top: 220%;
 }
 .noUi-vertical .noUi-tooltip {
 	transform: translate(0, -50%);

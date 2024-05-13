@@ -12,17 +12,88 @@
 				<p class="text-popup__descr">
 					Чтобы оформить заказ&nbsp;&mdash; заполните формы ниже и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течении часа.
 				</p>
-				<form action="#" class="text-popup__form">
-					<input type="text" name="name" id="popupName" placeholder="Как вас зовут?" class="text-popup__input" data-error="Ошибка">
-					<input type="text" name="tel" id="popupPhone" placeholder="Ваш телефон" class="text-popup__input" data-error="Ошибка">
+				<form action="#" class="text-popup__form form" data-dev data-goto-error data-popup-message="#form-message">
+					<label for="popupName" class="text-popup__label">
+						<input type="text" name="name" id="popupName" placeholder="Как вас зовут?" class="text-popup__input" data-error="Недопустимый формат" data-required data-validate autocomplete="off">
+					</label>
+					<label for="popupPhone" class="text-popup__label">
+						<input type="tel" name="tel" id="popupPhone" placeholder="Ваш телефон" class="text-popup__input" data-error="Поле не заполнено" autocomplete="off" data-required="tel">
+					</label>
 					<div class="text-popup__btns">
-						<button type="submit" class="text-popup__button button btn-site">Отправить</button>
+						<button type="submit" class="text-popup__button button btn-site"><span>Отправить</span></button>
 						<input type="checkbox" id="popupCheckbox" class="home-form__checkbox checkbox__input" value="1" name="form[]" data-error="Ошибка" checked>
 						<label for="homeInputCheckbox" class="checkbox__label home-form__label">
 							<span class="checkbox__text">Принимаю <a href="#">пользовательское соглашение</a></span>
 						</label>
 					</div>
 				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="form-message" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup-form">
+			<button data-close type="button" class="popup__close popup-form__close-btn">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29915 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="#A65CF0"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5915 19.6023C20.1362 19.0719 20.1362 18.2121 19.5915 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="#A65CF0"/>
+				</svg>					
+			</button>
+			<div class="popup-form__image">
+				<picture>
+					<source srcset="@img/site-logo.png" media="(min-width: 637px)">
+					<source srcset="@img/site-logo-mobile.png" media="(max-width: 636px)">
+					<img src="@img/site-logo.png" alt="Картина">
+				</picture>
+			</div>
+			<p class="popup-form__text">Спасибо, мы вам перезвоним!</p>
+		</div>
+	</div>
+</div>
+
+<div id="product-D-31" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup-product-slider">
+			<button data-aos="zoom-in" data-aos-delay="100" data-aos-offset="0" data-aos-once="false" data-close type="button" class="popup__close popup-form__close-btn">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29915 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="#A65CF0"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5915 19.6023C20.1362 19.0719 20.1362 18.2121 19.5915 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="#A65CF0"/>
+				</svg>					
+			</button>
+			<div class="images-product__img" data-aos="zoom-in" data-aos-delay="200" data-aos-offset="0" data-aos-once="false">
+				<img src="@img/main-product/popup/sofa-D-31-Big.png" alt="Картинка">
+			</div>
+			<div class="images-product__mini-slider">
+				<div class="images-product__thumbs thumbs-images">
+					<div data-aos="fade-up" data-aos-delay="200" data-aos-offset="0" data-aos-once="false" class="thumbs-images__swiper">
+						<div class="thumbs-images__slide">
+							<img src="@img/main-product/popup/sofa-D-31-preview-1.png" alt="Картинка">
+						</div>
+						<div class="thumbs-images__slide">
+							<img src="@img/main-product/popup/sofa-D-31-preview-2.png" alt="Картинка">
+						</div>
+						<div class="thumbs-images__slide">
+							<img src="@img/main-product/popup/sofa-D-31-preview-3.png" alt="Картинка">
+						</div>
+						<div class="thumbs-images__slide">
+							<img src="@img/main-product/popup/sofa-D-31-preview-4.png" alt="Картинка">
+						</div>
+					</div>
+				</div>
+				<div class="thumbs-images__controll">
+					<div class="thumbs-images__prev">
+						<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 1L1 6L6 11" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>			
+					</div>
+					<div class="thumbs-images__next">
+						<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>										
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -7,28 +7,36 @@
 			<div data-da=".hidden-header__container, 1120" class="top-header__info">
 				<div class="top-header__region region-header">
 					<div data-spollers class="region-header__items">
-						<div class="region-header__item">
+						<div data-aos="fade-down" data-aos-delay="100" class="region-header__item">
 							<div class="region-header__text">Ваш регион:</div>
-							<a href="#" class="region-header__region">Москва</a>
+							<div class="region-header__value">
+								<select name="form{}" class="region-header__city">
+									<option value="1" selected>Москва</option>
+									<option value="2">Казань</option>
+									<option value="3">Уфа</option>
+									<option value="4">Пермь</option>
+								</select>
+							</div>
+							<!--<a href="#" class="region-header__region">Москва</a>
 							<button data-spoller class="region-header__arrow _icon-spoller-arrow"></button>
 							<ul class="region-header__list">
 								<li><a href="#" class="region-header__region">Казань</a></li>
 								<li><a href="#" class="region-header__region">Уфа</a></li>
 								<li><a href="#" class="region-header__region">Пермь</a></li>
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 				</div>
-				<div class="top-header__phone phone-header">
+				<div data-aos="fade-down" data-aos-delay="100" class="top-header__phone phone-header">
 					<a href="tel:+74958854547" class="phone-header__link _icon-phone"><span>+7 (495) 885-45-47</span></a>
 				</div>
 			</div>
 			<nav data-da=".menu__body, 636.98" class="top-header__menu menu-top-header">
 				<ul class="menu-top-header__list">
-					<li class="menu-top-header__item"><a href="#" class="menu-top-header__link">О компании</a></li>
-					<li class="menu-top-header__item"><a href="#" class="menu-top-header__link">Гарантия и возврат</a></li>
-					<li class="menu-top-header__item"><a href="suppliers.html" target="_blank" class="menu-top-header__link">Корпоративным клиентам</a></li>
-					<li class="menu-top-header__item"><a href="#" class="menu-top-header__link">Дизайн-решение</a></li>
+					<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="#" class="menu-top-header__link">О компании</a></li>
+					<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="#" class="menu-top-header__link">Гарантия и возврат</a></li>
+					<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="suppliers.html" class="menu-top-header__link">Корпоративным клиентам</a></li>
+					<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="#" class="menu-top-header__link">Дизайн-решение</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -39,51 +47,55 @@
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 				<div class="menu__body"></div>
 			</nav>
-			<a data-da=".top-header__container, 636.98" href="#" class="catalog-header__logo">
-				<img src="@img/logo.png" alt="Логотип сайта">
+			<a data-da=".top-header__container, 636.98" href="/" class="catalog-header__logo">
+				<img data-aos="zoom-in" data-aos-delay="100" src="@img/logo.png" alt="Логотип сайта">
 			</a>
 			<nav data-da=".menu__body, 892.98" class="catalog-header__menu menu-catalog">
 				<ul class="menu-catalog__list">
-					<li class="menu-catalog__item"><a href="catalog.html" target="_blank" class="menu-catalog__link">Каталог</a></li>
-					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Магазины</a></li>
-					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Шоу-рум</a></li>
-					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Доставка и оплата</a></li>
-					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Дисконт</a></li>
-					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Контакты</a></li>
+					<li data-aos="fade-left" data-aos-delay="100" class="menu-catalog__item"><a href="catalog.html" class="menu-catalog__link">Каталог</a></li>
+					<li data-aos="fade-left" data-aos-delay="150" class="menu-catalog__item"><a href="" class="menu-catalog__link">Магазины</a></li>
+					<li data-aos="fade-left" data-aos-delay="200" class="menu-catalog__item"><a href="" class="menu-catalog__link">Шоу-рум</a></li>
+					<li data-aos="fade-left" data-aos-delay="250" class="menu-catalog__item"><a href="" class="menu-catalog__link">Доставка и оплата</a></li>
+					<li data-aos="fade-left" data-aos-delay="300" class="menu-catalog__item"><a href="" class="menu-catalog__link">Дисконт</a></li>
+					<li data-aos="fade-left" data-aos-delay="350" class="menu-catalog__item"><a href="contacts.html" class="menu-catalog__link">Контакты</a></li>
 				</ul>
+				<div class="menu-top-header__img">
+					<picture>
+						<source srcset="@img/site-logo.png" media="(min-width: 637px)">
+						<source srcset="@img/site-logo-mobile.png" media="(max-width: 636px)">
+						<img src="@img/site-logo.png" alt="Картина">
+					</picture>
+				</div>
 			</nav>
+			<div class="catalog-header__btns"></div>
 		</div>
 	</div>
 	<div class="header__body body-header">
 		<div class="body-header__container">
 			<div class="body-header__searchs">
-				<form action="#" class="searchs-header">
+				<form data-aos="fade-right" data-aos-delay="300" action="#" class="searchs-header">
 					<div class="searchs-header__icon _icon-search"></div>
-					<input id="header-search" value="" type="ext" class="searchs-header__search" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="Я хочу купить...">
-					<button type="submit" class="searchs-header__button">
-						<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>								
-					</button>
+					<input id="header-search" value="" type="text" class="searchs-header__search" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="Я хочу купить...">
+					<button type="submit" class="searchs-header__button"></button>
 				</form>
-				<div class="body-header__value">
+				<div data-aos="fade-right" data-aos-delay="200" class="body-header__value">
 					<select name="form[]" class="form">
-						<option value="1" selected>Категория</option>
-						<option value="2">Диваны</option>
-						<option value="3">Кресла</option>
-						<option value="4">Пуфы</option>
-						<option value="5">Кровати</option>
-						<option value="6">Тумбы</option>
-						<option value="7">Комоды</option>
-						<option value="8">Стулья</option>
-						<option value="9">Столы</option>
-						<option value="10">Аксессуары</option>
+						<option value disabled selected>Категория</option>
+						<option value="1">Диваны</option>
+						<option value="6">Комоды</option>
+						<option value="2">Кресла</option>
+						<option value="7">Стулья</option>
+						<option value="3">Пуфы</option>
+						<option value="8">Столы</option>
+						<option value="4">Кровати</option>
+						<option value="9">Аксессуары</option>
+						<option value="5">Тумбы</option>
 					</select>
 				</div>
 			</div>
 			<div data-da=".top-header__container, 1120" class="body-header__actions actions-body-header">
-				<a data-da=".catalog-header__container, 892.98" href="" class="actions-body-header__user _icon-user"></a>
-				<a data-da=".catalog-header__container, 892.98" href="" class="actions-body-header__cart cart-header">
+				<a data-aos="fade-left" data-aos-delay="200" data-da=".catalog-header__btns, 892.98" href="" class="actions-body-header__user _icon-user"></a>
+				<a data-aos="fade-left" data-aos-delay="250" data-da=".catalog-header__btns, 892.98" href="" class="actions-body-header__cart cart-header">
 					<div class="cart-header__icon _icon-cart"><span>0</span></div>
 				</a>
 			</div>

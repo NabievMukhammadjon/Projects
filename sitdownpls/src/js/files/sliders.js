@@ -40,13 +40,54 @@ function bildSliders() {
 }
 function initSliders() {
 	bildSliders();	
-	if (document.querySelector('.main-block__slider')) {
+	if (document.querySelector('.thumbs-main-block')) {
+		const thumbsSwiper = new Swiper('.thumbs-main-block__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination, Autoplay, Thumbs],
+			//effect: 'fade',
+			observer: true,
+			watchOverflow: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 10,
+			parallax: true,
+			loop: true,
+			//autoHeight: true,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			pagination: {
+				el: '.products-new__dotts',
+				clickable: true,
+				dynamicBullets: true
+			},
+
+			breakpoints: {
+				992: {
+					slidesPerView: 3,
+				},
+				1330: {
+					slidesPerView: 4,
+					spaceBetween: 16,
+				},
+			},
+			on: {
+				init: function (swiper) {
+
+				}
+			}
+		});
 		new Swiper('.main-block__slider', {
-			modules: [Navigation, Pagination, Parallax, Autoplay],
+			modules: [Navigation, Pagination, Parallax, Autoplay, Thumbs],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 10,
 			speed: 800,
 			parallax: true,
 			loop: true,
@@ -62,10 +103,10 @@ function initSliders() {
 			//   },
 			// },
 			
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 5000,
+			// 	disableOnInteraction: false,
+			// },
 			// Пагинация
 			pagination: {
 				el: '.controll-main-block__dotts',
@@ -79,6 +120,11 @@ function initSliders() {
 			mousewheel: {
 				sensitivity: 1,
 			},
+			thumbs: {
+				swiper: thumbsSwiper,
+			},
+			// breakpoints: {
+			// },
 			// События
 			on: {
 
@@ -101,15 +147,12 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/			
-
+			// effect: 'fade',
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
 			// Скроллбар
 			/*
 			scrollbar: {
@@ -117,6 +160,14 @@ function initSliders() {
 				draggable: true,
 			},
 			*/
+			lazy: {
+				// Подгружать на старте
+				// переключения слайда
+				loadOnTransitionStart: false,
+				// Подгрузить предыдущую
+				// и слудующую картинку
+				loadPrevNext: false,
+			},
 			
 			// Кнопки "влево/вправо"
 			navigation: {
@@ -157,7 +208,7 @@ function initSliders() {
 			slidesPerView: 2,
 			spaceBetween: 32,
 			speed: 800,
-			loop: true,
+			// loop: true,
 
 			
 			// Кнопки "влево/вправо"
@@ -165,18 +216,22 @@ function initSliders() {
 				prevEl: '.usefuls-articles__prev',
 				nextEl: '.usefuls-articles__next',
 			},
+			/*
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
+			*/
 			keyboard: {
 				// включить\выключить
 				enabled: true,
 				onlyInViewport: true,
 			},
+			/*
 			mousewheel: {
 				sensitivity: 1,
 			},
+			*/
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
@@ -190,6 +245,14 @@ function initSliders() {
 				1268: {
 					slidesPerView: 2,
 				},
+			},
+			lazy: {
+				// Подгружать на старте
+				// переключения слайда
+				loadOnTransitionStart: false,
+				// Подгрузить предыдущую
+				// и слудующую картинку
+				loadPrevNext: false,
 			},
 			// События
 			on: {
@@ -205,17 +268,19 @@ function initSliders() {
 			slidesPerView: 4,
 			spaceBetween: 32,
 			speed: 800,
-			loop: true,
+			// loop: true,
 			grabCursor: true,
 			// Кнопки "влево/вправо"
 			navigation: {
 				prevEl: '.similar-products__prev',
 				nextEl: '.similar-products__next',
 			},
+			/*
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
+			*/
 			/*
 			keyboard: {
 				// включить\выключить
@@ -245,85 +310,36 @@ function initSliders() {
 			}
 		});
 	}
-	/*
-	if (document.querySelector('.thumbs-images')) {
-		const thumbsSwiper = new Swiper('.thumbs-images', {
-			// Подключаем модули слайдера
-			// для конкретного случая
-			modules: [Navigation, Pagination, Autoplay, Thumbs],
-			observer: true,
-			watchOverflow: true,
-			observeParents: true,
-			slidesPerView: 4,
-			spaceBetween: 16,
-			speed: 800,
-			pagination: {
-				el: '.products-new__dotts',
-				clickable: true,
-				dynamicBullets: true
-			},
-			breakpoints: {
-				992: {
-					slidesPerView: 3,
-				},
-				1330: {
-					slidesPerView: 4,
-					spaceBetween: 16,
-				},
-			},
-			on: {
-				init: function (swiper) {
-
-				}
-			}
-		});
-		new Swiper('.images-product__slider', {
-			modules: [Navigation, Pagination, Autoplay, Thumbs],
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			thumbs: {
-				swiper: thumbsSwiper
-			},
-			observer: true,
-			watchOverflow: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 	30,
-			speed: 800,
-			on: {
-				init: function (swiper) {
-
-				}
-			}
-		});
-	}
-	*/
 	if (document.querySelector('.thumbs-images')) {
 		new Swiper('.thumbs-images', {
 			modules: [Navigation, Autoplay],
-			breakpoints: {
-				320: {
-					slidesPerView: 2.1,
-					spaceBetween: 	38,
-				},
-				636: {
-					spaceBetween: 0,
-				},
-				892: {
-					slidesPerView: 3.5,
-				},
-				1390: {
-					slidesPerView: 4,
-					spaceBetween: 38,
-				},
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.thumbs-images__prev',
+				nextEl: '.thumbs-images__next',
 			},
 			observer: true,
 			watchOverflow: true,
 			observeParents: true,
-			spaceBetween: 	38,
 			speed: 800,
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 78,
+				},
+				636: {
+					slidesPerView: 2,
+					spaceBetween: 78,
+				},
+				892: {
+					slidesPerView: 3,
+					spaceBetween: 78,
+				},
+				1120: {
+					slidesPerView: 4,
+					spaceBetween: 78,
+				},
+			},
 			on: {
 				init: function (swiper) {
 

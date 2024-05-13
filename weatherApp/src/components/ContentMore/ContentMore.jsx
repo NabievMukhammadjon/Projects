@@ -4,7 +4,10 @@ import { WindSpeedCard, HumidityCard, VisibilityCard, PressureCard } from '../to
 export function ContentMore() {
 	const { isLoading, isError, response, getWeather } = useWeatherState((state) => state);
 	useEffect(() => {
-		getWeather({ lat: 45.0351532, lon: 38.9772396 });
+		// getWeather({ lat: 45.0351532, lon: 38.9772396 });
+    // "40.3764879" lat
+    // "71.7913193" lon
+		getWeather({ lat: 40.3764879, lon: 71.7913193 });
 	}, [getWeather]);
 	return (
 		<div className="more">

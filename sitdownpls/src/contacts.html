@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Contacts"
+	})
+	<body>
+        @@include('html/_preloader.htm',{})
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page contacts-page">
+                <section class="page__header">
+                    <div class="page__container">
+                        <nav class="page__breadcrumbs breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li data-aos="fade-right" data-aos-delay="250" class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Главная /</a>
+                                </li>
+                                <li data-aos="fade-right" data-aos-delay="200" class="breadcrumbs__item">
+                                    <span class="breadcrumbs__current">Контакты</span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+                <section class="contacts">
+                    <div class="contacts__container">
+                        <h2 data-aos="fade-right" data-aos-delay="300" class="contacts__title">Контакты</h2>
+                        <form action="#" class="contacts__form form">
+                            <label for="addressMap" class="contacts__label">
+                                <input data-aos="zoom-out" data-aos-delay="350" id="addressMap" type="text" class="contacts__input" placeholder="Поиск магазина" name="search" autocomplete="off" data-required data-validate data-error="Поле пустое">
+                            </label>
+                            <button data-aos="zoom-out" data-aos-delay="350" type="submit" class="contacts__button btn-site button"><span>Поиск</span></button>
+                        </form>
+                        <div data-aos="zoom-in-down" data-aos-delay="350" data-aos-duration="2000" id="mapContacts" class="contacts__map">
+                        </div>
+                    </div>
+                </section>
+            </main>
+			@@include('html/_footer.htm',{})
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
+        @@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

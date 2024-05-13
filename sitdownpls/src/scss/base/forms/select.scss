@@ -11,38 +11,39 @@
 		width: 100%;
 		text-align: left;
 		color: inherit;
-		background-color: #fff;
+		background-color: transparent;
+		// background-color: #fff;
 		cursor: pointer;
 		transition: all .3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				& .select__value {
-					border-color: $mainPrimary;
-				}		
-			}
-			&:focus-visible {
-				& .select__value {
-					background-color: $mainPinkViolet;
-					border-color: $mainPrimary;
-				}	
-			}
-			&:active {
-				& .select__value {
-					border-color: $mainPrimaryShade;
-				}	
-			}
-		}
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		& .select__value {
+		// 			border-color: $mainPrimary;
+		// 		}		
+		// 	}
+		// 	&:focus-visible {
+		// 		& .select__value {
+		// 			background-color: $mainPinkViolet;
+		// 			border-color: $mainPrimary;
+		// 		}	
+		// 	}
+		// 	&:active {
+		// 		& .select__value {
+		// 			border-color: $mainPrimaryShade;
+		// 		}	
+		// 	}
+		// }
 	}
 	// .select__value
 	&__value {
 		display: flex;
 		position: relative;
 		align-items: center;
-		height: rem(60);
-		padding: 0 rem(15);
-		gap: rem(10);
-		border: 2px solid #F7F7F7;
-		border-radius: 0px 10px 10px 0px;
+		// height: rem(60);
+		// padding: 0 rem(15);
+		// gap: rem(10);
+		// border: 2px solid #F7F7F7;
+		// border-radius: 0px 10px 10px 0px;
 		> * {
 			flex: 1 1 auto;
 		}

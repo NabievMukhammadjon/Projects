@@ -4,6 +4,7 @@
 	"title":"Card"
 	})
 	<body>
+        @@include('html/_preloader.htm',{})
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page product-page">
@@ -11,19 +12,19 @@
                     <div class="page__container">
                         <nav class="page__breadcrumbs breadcrumbs">
                             <ul class="breadcrumbs__list">
-                                <li class="breadcrumbs__item">
-                                    <a href="" class="breadcrumbs__link">Главная /</a>
+                                <li data-aos="fade-right" data-aos-delay="1200" class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Главная /</a>
                                 </li>
-                                <li class="breadcrumbs__item">
-                                    <a href="" class="breadcrumbs__link">Каталог /</a>
+                                <li data-aos="fade-right" data-aos-delay="1150" class="breadcrumbs__item">
+                                    <a href="catalog.html" class="breadcrumbs__link">Каталог /</a>
                                 </li>
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link">Диваны /</span>
+                                <li data-aos="fade-right" data-aos-delay="1100" class="breadcrumbs__item">
+                                    <a href="#" class="breadcrumbs__link">Диваны /</a>
                                 </li>
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link">Прямые диваны /</span>
+                                <li data-aos="fade-right" data-aos-delay="1050" class="breadcrumbs__item">
+                                    <a href="#" class="breadcrumbs__link">Прямые диваны /</a>
                                 </li>
-                                <li class="breadcrumbs__item">
+                                <li data-aos="fade-right" data-aos-delay="1000" class="breadcrumbs__item">
                                     <span class="breadcrumbs__current">D-31</span>
                                 </li>
                             </ul>
@@ -34,43 +35,40 @@
                     <div class="main-product__container">
                         <div class="main-product__images images-product">
                             <div class="images-product__inner">
-                                <div class="images-product__img">
+                                <div data-aos="zoom-out" data-aos-delay="1300" data-popup="#product-D-31" class="images-product__img">
                                     <img src="@img/main-product/cardBig.png" alt="Картинка">
                                 </div>
-                                <!-- <div class="images-product__bottom"> -->
-                                    <div class="images-product__thumbs thumbs-images">
-                                        <div class="thumbs-images__swiper">
-                                            <div class="thumbs-images__slide">
-                                                <img src="@img/main-product/cardLittle-1.png" alt="Картинка">
-                                            </div>
-                                            <div class="thumbs-images__slide">
-                                                <img src="@img/main-product/cardLittle-2.png" alt="Картинка">
-                                            </div>
-                                            <div class="thumbs-images__slide">
-                                                <img src="@img/main-product/cardLittle-3.png" alt="Картинка">
-                                            </div>
-                                            <div class="thumbs-images__slide">
-                                                <img src="@img/main-product/cardLittle-4.png" alt="Картинка">
-                                            </div>
+                                
+                                    <div class="images-product__small">
+                                        <div data-aos="zoom-out" data-aos-delay="1400" class="images-product__small-img">
+                                            <img src="@img/main-product/cardLittle-1.png" alt="Картинка">
+                                        </div>
+                                        <div data-aos="zoom-out" data-aos-delay="1400" class="images-product__small-img">
+                                            <img src="@img/main-product/cardLittle-2.png" alt="Картинка">
+                                        </div>
+                                        <div data-aos="zoom-out" data-aos-delay="1400" class="images-product__small-img">
+                                            <img src="@img/main-product/cardLittle-3.png" alt="Картинка">
+                                        </div>
+                                        <div data-aos="zoom-out" data-aos-delay="1400" class="images-product__small-img">
+                                            <img src="@img/main-product/cardLittle-4.png" alt="Картинка">
                                         </div>
                                     </div>
                                     <div class="images-product__hidden-block"></div>
-                                <!-- </div> -->
                             </div>
                             <div class="images-product__info">
-                                <h4 class="images-product__title">Опорный механизм</h4>
-                                <p class="images-product__descr">
+                                <h4 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" class="images-product__title">Опорный механизм</h4>
+                                <p data-aos="fade-right" data-aos-delay="100" data-aos-duration="500" class="images-product__descr">
                                     Опорный механизм напоминает пантограф, к&nbsp;которому добавили дополнительную секцию. У&nbsp;опорного дивана сиденье &laquo;выпрыгивает&raquo; вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих&nbsp;&mdash; опустить спинку.
                                     <br/>
                                     Этот механизм не&nbsp;портит пол и&nbsp;не&nbsp;боится ковров. Требуется чуть больше силы, чтобы разложить диван, но&nbsp;подросток справится.
                                 </p>
                                 <div class="images-product__preview preview-img">
-                                    <div class="preview-img__item">
+                                    <div data-aos="zoom-in-up" data-aos-delay="100" class="preview-img__item">
                                         <span class="preview-img__image-ibg">
                                             <img src="@img/main-product/card-preview-1.png" alt="Картинка">
                                         </span>
                                     </div>
-                                    <div class="preview-img__item">
+                                    <div data-aos="zoom-in-up" data-aos-delay="100" class="preview-img__item">
                                         <span class="preview-img__image-ibg">
                                             <img src="@img/main-product/card-preview-2.png" alt="Картинка">
                                         </span>
@@ -81,74 +79,74 @@
                         <div class="main-product__body body-product">
                             <div data-da=".images-product__hidden-block, 892.98" class="body-product__header">
                                 <div class="body-product__product-info">
-                                    <div class="body-product__rating _icon-star">4,8</div>
-                                    <h3 class="body-product__title">Диван тканевый прямой “D-31”</h3>
-                                    <div class="body-product__text">Мини 120 см без ящика Stark синий (Рогожка)</div>
+                                    <div data-aos="fade-left" data-aos-delay="1300" class="body-product__rating _icon-star">4,8</div>
+                                    <h3 data-aos="fade-left" data-aos-delay="1300" data-aos-duration="300" class="body-product__title">Диван тканевый прямой “D-31”</h3>
+                                    <div data-aos="fade-left" data-aos-delay="1300" data-aos-duration="500" class="body-product__text">Мини 120 см без ящика Stark синий (Рогожка)</div>
                                 </div>
-                                <div class="body-product__price">28 490 руб</div>
+                                <div data-aos="fade-left" data-aos-delay="1300" class="body-product__price">28 490 руб</div>
                                 <div class="body-product__btns">
-                                    <button data-popup="#byOneClick" class="body-product__button button btn-site">Купить в один клик</button>
-                                    <button class="body-product__btn-cart">+ Добавить в корзину</button>
+                                    <button data-aos="fade-left" data-aos-delay="1300" data-popup="#byOneClick" class="body-product__button button btn-site"><span>Купить в один клик</span></button>
+                                    <button data-aos="fade-left" data-aos-delay="1300" class="body-product__btn-cart">+ Добавить в корзину</button>
                                 </div>
                             </div>
                             <ul class="body-product__info info-product">
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="100" class="info-product__item">
                                     <div class="info-product__name">Гарантия</div>
                                     <div class="info-product__data">18 месяцев</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="150" class="info-product__item">
                                     <div class="info-product__name">Артикул</div>
                                     <div class="info-product__data">AAA41269004</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="200" class="info-product__item">
                                     <div class="info-product__name">Длина</div>
                                     <div class="info-product__data">163 см</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="250" class="info-product__item">
                                     <div class="info-product__name">Высота</div>
                                     <div class="info-product__data">90 см</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="300" class="info-product__item">
                                     <div class="info-product__name">Глубина</div>
                                     <div class="info-product__data">108 см</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="350" class="info-product__item">
                                     <div class="info-product__name">Спальное место</div>
                                     <div class="info-product__data">200 см х 125 см</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="400" class="info-product__item">
                                     <div class="info-product__name">Высота посадки</div>
                                     <div class="info-product__data">45 см</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="450" class="info-product__item">
                                     <div class="info-product__name">Механизм</div>
                                     <div class="info-product__data">Опорный</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="500" class="info-product__item">
                                     <div class="info-product__name">Тип обивки</div>
                                     <div class="info-product__data">Рогожка</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="550" class="info-product__item">
                                     <div class="info-product__name">Цвет</div>
                                     <div class="info-product__data">Синий</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="600" class="info-product__item">
                                     <div class="info-product__name">Наполнитель</div>
                                     <div class="info-product__data">Независимый пружинный блок</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="650" class="info-product__item">
                                     <div class="info-product__name">Материал каркаса</div>
                                     <div class="info-product__data">Металл. рама с дерев. латами</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="700" class="info-product__item">
                                     <div class="info-product__name">Количество мест</div>
                                     <div class="info-product__data">Двухместные</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="750" class="info-product__item">
                                     <div class="info-product__name">Категория</div>
                                     <div class="info-product__data">Прямые тканевые диваны</div>
                                 </li>
-                                <li class="info-product__item">
+                                <li data-aos="fade-up" data-aos-delay="800" class="info-product__item">
                                     <div class="info-product__name">Возврат</div>
                                     <div class="info-product__data">Условия</div>
                                 </li>
@@ -159,14 +157,14 @@
                 <section class="similar-products">
                     <div class="similar-products__container">
                         <div class="similar-products__content">
-                            <h3 class="similar-products__title">Похожие товары</h3>
+                            <h3 data-aos="fade-up" data-aos-delay="100" class="similar-products__title">Похожие товары</h3>
                             <div class="similar-products__controll">
-								<div class="similar-products__prev">
+								<div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" class="similar-products__prev">
 									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M6 1L1 6L6 11" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>																		
 								</div>
-								<div class="similar-products__next">
+								<div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" class="similar-products__next">
 									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>										
@@ -176,7 +174,7 @@
                         <div class="similar-products__inner">
                             <div class="similar-products__slider">
                                 <div class="similar-products__swiper">
-                                    <div class="similar-products__slide">
+                                    <div data-aos="fade-up" data-aos-delay="200" class="similar-products__slide">
                                         <article class="products-card">
                                             <a href="" class="products-card__image">
                                                 <img src="@img/high-rating/highRating_sofa_R-85.png" alt="Картинка">
@@ -193,7 +191,7 @@
                                             </div>
                                         </article>
                                     </div>
-                                    <div class="similar-products__slide">
+                                    <div data-aos="fade-up" data-aos-delay="200" class="similar-products__slide">
                                         <article class="products-card">
                                             <a href="" class="products-card__image">
                                                 <img src="@img/high-rating/highRating_sofa_H-58.png" alt="Картинка">
@@ -210,7 +208,7 @@
                                             </div>
                                         </article>
                                     </div>
-                                    <div class="similar-products__slide">
+                                    <div data-aos="fade-up" data-aos-delay="200" class="similar-products__slide">
                                         <article class="products-card">
                                             <a href="" class="products-card__image">
                                                 <img src="@img/high-rating/highRating_sofa_S-44.png" alt="Картинка">
@@ -227,7 +225,7 @@
                                             </div>
                                         </article>
                                     </div>
-                                    <div class="similar-products__slide">
+                                    <div data-aos="fade-up" data-aos-delay="200" class="similar-products__slide">
                                         <article class="products-card">
                                             <a href="" class="products-card__image">
                                                 <img src="@img/high-rating/highRating_sofa_V-43.png" alt="Картинка">
@@ -244,7 +242,7 @@
                                             </div>
                                         </article>
                                     </div>
-                                    <div class="similar-products__slide">
+                                    <div data-aos="fade-up" data-aos-delay="200" class="similar-products__slide">
                                         <article class="products-card">
                                             <a href="" class="products-card__image">
                                                 <img src="@img/high-rating/highRating_sofa_H-64.png" alt="Картинка">
@@ -271,7 +269,8 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-		@@include('html/_popup.htm',{})
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
+        @@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

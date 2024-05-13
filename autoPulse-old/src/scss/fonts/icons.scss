@@ -1,0 +1,125 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+
+// ._icon-arrow:before {
+// 	content: "\e900";
+// }
+
+// ._icon-caretDown:before {
+// 	content: "\e901";
+// }
+
+// ._icon-engine:before {
+// 	content: "\e902";
+// }
+
+// ._icon-facebook:before {
+// 	content: "\e903";
+// }
+
+// ._icon-gear:before {
+// 	content: "\e904";
+// }
+
+// ._icon-handsShake:before {
+// 	content: "\e905";
+// }
+
+// ._icon-image:before {
+// 	content: "\e906";
+// }
+
+// ._icon-location:before {
+// 	content: "\e907";
+// }
+
+// ._icon-mouse:before {
+// 	content: "\e908";
+// }
+
+// ._icon-phone:before {
+// 	content: "\e909";
+// }
+
+// ._icon-wrench:before {
+// 	content: "\e90a";
+// }
+
+// ._icon-xLogo:before {
+// 	content: "\e90b";
+// }
+
+
+//========================================================================================================================================================
+._icon-arrowOpen:before {
+	content: "\e900";
+	color: #fff;
+}
+
+._icon-appStore:before {
+	content: "\e907";
+}
+
+._icon-arrowShareDown:before {
+	content: "\e909";
+}
+
+._icon-arrowShareUp:before {
+	content: "\e90a";
+}
+
+._icon-arrowUp:before {
+	content: "\e90b";
+}
+
+._icon-barcode:before {
+	content: "\e90c";
+}
+
+._icon-decorNine:before {
+	content: "\e90d";
+}
+
+._icon-discord:before {
+	content: "\e90e";
+}
+
+._icon-instagram:before {
+	content: "\e90f";
+}
+
+._icon-linkedIn:before {
+	content: "\e910";
+}
+
+._icon-playMarket:before {
+	content: "\e911";
+}
+
+._icon-plus:before {
+	content: "\e912";
+}
+
+._icon-telegram:before {
+	content: "\e913";
+}
+
+._icon-youtube:before {
+	content: "\e914";
+}

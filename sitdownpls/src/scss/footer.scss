@@ -23,7 +23,7 @@
     }
     // .body-footer__row
     &__row {
-        flex: 1 1 auto;
+        flex: 0 1 rem(407);
         display: flex;
         flex-direction: column;
         row-gap: rem(30);

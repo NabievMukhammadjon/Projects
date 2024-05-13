@@ -10,7 +10,8 @@ export function ContentHeader() {
 	const { isWeek, isHours, setWeekTab, setHoursTab } = useSliderSwitcherController();
 	const listResponse = useWeatherState((state) => state.listResponse);
 	const [listOnWeek, setListOnWeek] = useState([]);
-	useEffect(() => {
+	
+  useEffect(() => {
 		if (listResponse === null || !isWeek) return;
 		const filter = (i) => {
 			const currentDay = new Date();

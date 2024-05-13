@@ -1,0 +1,87 @@
+.text {
+    &_title {
+        @include adaptiveValue("font-size", 48, 32);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &_red {
+        color: $red;
+    }
+}
+.btn {
+    &_red {
+        font-weight: 600;        
+        padding: 0 30px;
+        background-color: $red;
+        transition: all 0.5s ease 0s;
+        @media (any-hover: hover){
+            &:focus-visible {
+                outline: 2px solid $redBold;
+                outline-offset: 3px;
+            }
+            &:hover{
+                background-color: $redLight;
+            }
+            &:active {
+                background-color: $redBold;
+            }
+        }
+    }
+    &_border {
+        outline: none;
+        font-weight: 400;
+        border: 1px solid $grey;
+        padding: 0 20px;
+        transition: all 0.5s ease 0s;
+        &:focus-visible{
+            border-color: $redBold;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                background-color: $blackBack;
+                border-color: $blackBack;
+            }
+            &:active {
+                background-color: $redBold;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
+.controll-swiper {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+.swiper-dotts {
+    display: flex;
+    gap: rem(15);
+    justify-content: center;
+    margin-top: rem(40);
+    transform: translate(0, 10%);
+    & .swiper-pagination-bullet {
+        position: relative;
+        height: rem(30);
+        width: rem(15);
+        cursor: pointer;
+        transition: all .3s ease 0s;
+        &::after {
+            content: "";
+            position: absolute;
+            height: rem(2);
+            width: 100%;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: $grey;
+        }
+        
+    }
+    & .swiper-pagination-bullet-active {
+        width: rem(30);
+        &::after {
+            background-color: $red; 
+        }
+    }
+}

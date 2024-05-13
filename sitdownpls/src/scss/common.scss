@@ -47,6 +47,12 @@
     display: grid;
     grid-template-rows: rem(208) 1fr;
     border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, .1);
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, .2);
+        }
+    }
     background: $mainGreyLight;
     &_mobile {
         @media (max-width: em(1285)) {
@@ -135,6 +141,7 @@
     }
     // .body-high-rating__button
     &__button {
+        padding: rem(18) rem(32);
         align-self: flex-start;
     }
 }
@@ -156,7 +163,7 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(12, 1fr);
+        grid-template-rows: repeat(9, 1fr);
         // grid-template-rows: repeat(auto-fit, minmax( auto, 511px));
         gap: rem(32);
         @media (max-width: $tablet) {
@@ -176,7 +183,7 @@
     }
     // .top-category__item
     &__item {
-        grid-row: span 5;
+        grid-row: span 4;
         grid-column: span 4;
         background-color: $mainGreyLight;
         border-radius: rem(10);
@@ -205,14 +212,14 @@
     &__body {
         display: flex;
         flex-direction: column;
-        @media (min-width: $mobileSmall) {
-            height: 100%;   
-        }
+        // @media (min-width: $mobileSmall) {
+            // height: 100%;   
+        // }
     }
     // .card-category__big
     &_big {
         grid-column: span 6;
-        grid-row: span 7;
+        grid-row: span 5;
         @media (max-width: $tablet) {
             grid-row: 1;
             &:nth-child(2) {
@@ -242,8 +249,10 @@
     &__title {
         font-size: rem(24);
         line-height: math.div(33, 24);
-        &:not(:last-child) {
-            margin-bottom: rem(30);
+        @media (min-width: $mobileSmall) {
+            &:not(:last-child) {
+                margin-bottom: rem(30);
+            }
         }
         @media (max-width: $mobileSmall) {
             display: flex;
@@ -251,13 +260,42 @@
             font-size: rem(16);
             line-height: 100%;
             
+
         }
     }
     // .card-category__image
     &__image {
         @include adaptiveValue("margin-left", -30, -16, 0, 892, 636);
-        @media (min-width: $mobileSmall) {
-            flex: 1 1 auto;
+        // @media (min-width: $mobileSmall) {
+            // flex: 1 1 auto;
+        // }
+        margin-bottom: rem(28);
+        @media (max-width: $mobileSmall) {
+            height: 104px;
+        }
+        &_bad {
+            @media (min-width: $mobileSmall) and (max-width: $tablet) {
+                img {
+                    position: absolute;
+                    width: 100%;
+                    // @include adaptiveValue("height", 296, 104, 0, 890, 636);
+                    // @include adaptiveValue("top", 127, 86, 0, 890, 636);
+                    height: rem(296);
+                    top: rem(127);
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            img {
+                position: absolute;
+                width: 100%;
+                height: rem(104);
+                top: rem(89);
+                left: 0;
+                right: 0;
+            }
         }
     }
     // .card-category__link
@@ -270,7 +308,7 @@
         line-height: math.div(19, 16);
         color: $mainPrimary;
         z-index: 1;
-        transition: all .3s ease 0s;
+        transition: all 5s ease 0s;
         &-icon {
             display: flex;
             align-items: center;
@@ -279,7 +317,11 @@
             border-radius: 50%;
             width: rem(22);
             height: rem(22);
+            transition: all .5s ease 0s; 
             // padding: 0 rem(7) 0 rem(8);
+            span {
+                transition: text-decoration .5s ease 0s; 
+            }
         }
         @media (any-hover: hover) {
             &:hover {
@@ -289,6 +331,7 @@
                 .card-category__link-icon {
                     background-color: $mainPrimary;
                     svg path {
+                        transition: stroke .5s ease 0s;
                         stroke: #fff;
                     }
                 }  
@@ -300,6 +343,7 @@
                 .card-category__link-icon {
                     background-color: $mainPrimaryLight;
                     svg path {
+                        transition: stroke .5s ease 0s;
                         stroke: #fff;
                     }
                 }  
@@ -309,6 +353,7 @@
                     background-color: $mainPrimaryShade;
                     border-color: $mainPrimaryShade;
                     svg path {
+                        transition: stroke .5s ease 0s;
                         stroke: #fff;
                     }
                 }  
@@ -358,6 +403,9 @@ picture {
 }
 // =====================================================================================
 .breadcrumbs {
+    @media (max-width: $mobileSmall) {
+        display: none;
+    }
     // .breadcrumbs__list
     &__list {
         display: flex;
@@ -372,6 +420,7 @@ picture {
     }
     // .breadcrumbs__current
     &__current {
+        color: $mainPrimary;
     }
 }
 // =====================================================================================
@@ -411,7 +460,11 @@ picture {
             color: #fff;
             background-color: $mainPrimary;
         }
-
+        @media (min-width: $mobile) {
+            &:last-child {
+                display: none;
+            }
+        }
     }
 }
 // =====================================================================================
@@ -431,6 +484,30 @@ picture {
     }
     // .popup__text
     &__text {
+    }
+
+}
+.popup-form {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("gap", 32, 14, 0, 892, 636);
+    @include adaptiveValue("padding-top", 118, 60, 0, 892, 636);
+    @include adaptiveValue("padding-bottom", 118, 60, 0, 892, 636);
+    // .popup-form__image
+    &__image {
+        
+    }
+    // .popup-form__text
+    &__text {
+        @include adaptiveValue("font-size", 32, 16, 0, 892, 636);
+        line-height: 100%;
+    }
+    // .popup-form__close-btn
+    &__close-btn {
+        position: absolute;
+        top: rem(20);
+        right: rem(20);
     }
 }
 .text-popup {
@@ -456,9 +533,20 @@ picture {
         flex-direction: column;
         @include adaptiveValue("row-gap", 30, 16, 0, 892, 636);
     }
+    // .text-popup__label
+    &__label {
+        position: relative;
+        .form__error {
+            position: absolute;
+            top: rem(-20);
+            left: rem(18);
+            color: red;   
+        }
+    }
     // .text-popup__input
     &__input {
         padding: rem(7) rem(18);
+        width: 100%;
         font-size: rem(16);
         line-height: math.div(40, 16);
         background: #F7F7F7;
@@ -475,6 +563,25 @@ picture {
     &__button {
         align-self: flex-start;
         padding: rem(19) rem(35);
+    }
+}
+.popup-product-slider {
+    // align-items: center;
+    justify-content: center;
+    max-width: rem(1280);
+    padding: 50 107 20;
+    padding: 32 16 16 16;
+    @include adaptiveValue("padding-top", 50, 32, 0, 1920, 1300);
+    @include adaptiveValue("padding-right", 107, 16, 0, 1920, 1300);
+    @include adaptiveValue("padding-button", 20, 16, 0, 1920, 1300);
+    @include adaptiveValue("padding-left", 107, 16, 0, 1920, 1300);
+    & .images-product {
+        &__img {
+            align-self: center;
+        }
+        &__thumbs {
+            background-color: transparent;
+        }
     }
 }
 // =====================================================================================
@@ -650,3 +757,26 @@ picture {
     }
 }
 // =====================================================================================
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 2px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    @media (max-width: $mobile) {
+        background: #303030;
+        border-radius: 3px;
+    }
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

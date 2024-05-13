@@ -1,0 +1,213 @@
+.footer {
+    &__top {
+        padding: 40px 0;
+        background-color: $blackBack-1B;
+    }
+    /* .footer__container */
+    &__container {}
+
+    /* .footer__row */
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    }
+
+    /* .footer__bottom */
+    &__bottom {}
+}
+
+.row-footer {
+
+    /* .row-footer__spollers */
+    &__spollers {}
+
+    /* .row-footer__item */
+    &__item {}
+
+    /* .row-footer__title */
+    &__title {
+        position: relative;
+        font-size: rem(24);
+        font-weight: 600;
+        &::after{
+            content: "\e901";
+            @extend %ic;
+            display: none;
+            position: absolute;
+            // width: rem(24);
+            // height: rem(24);
+            top: 6px;
+            right: 0;
+            font-size: rem(12);
+            transition: all 0.5s ease 0s;
+        }
+        @media (max-width: 678px){
+            width: 100%;
+            text-align: start;
+            &::after{
+                display: block;
+            }     
+        }
+        &._spoller-active {
+            &::after{
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    /* .row-footer__body */
+    &__body {
+        padding: 15px 0;
+    }
+}
+
+.contacts-footer {
+
+    /* .contacts-footer__list */
+    &__list {
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    /* .contacts-footer__item */
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    /* .contacts-footer__link */
+    &__link {
+        display: flex;
+        gap: 4px;
+        font-size: rem(14);
+        transition: all 0.5s ease 0s;
+        outline: none;
+        &._icon-phone {
+            &::before{
+                font-size: rem(12);
+            }
+        }
+        @media (any-hover: hover){
+            &:focus-visible {
+                color: $red;
+            }
+            &:hover{
+                color: $redLight;
+            }
+        }
+        
+    }
+
+    /* .contacts-footer__btns */
+    &__btns {}
+
+    /* .contacts-footer__btn */
+    &__btn {
+        padding: 12px 60px;
+        border-radius: rem(50);
+    }
+    &__social {
+        padding: 14px;
+        border-radius: 100%;
+    }
+}
+
+.hours-footer {
+
+    /* .hours-footer__item */
+    &__item {
+        display: flex;
+        gap: rem(15);
+        &:not(:last-child) {
+            margin-bottom: rem(6);
+        }
+    }
+
+    /* .hours-footer__day */
+    &__day {
+        flex: 0 1 rem(75);
+        font-size: 14px;
+    }
+
+    /* .hours-footer__time */
+    &__time {
+        font-size: 14px;
+
+    }
+}
+
+.services-footer {
+
+    /* .services-footer__items */
+    &__items {}
+
+    /* .services-footer__item */
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(8);
+        }
+    }
+    &__link {
+        transition: all 0.5s ease 0s;
+        font-size: rem(14); 
+        outline: none;
+        @media (any-hover: hover){
+            &:focus-visible {
+                color: $red;
+            }
+            &:hover{
+                color: $redLight;
+            }
+        }
+    }
+}
+
+.bottom-footer {
+    padding: 20px 0;
+    background-color: $blackBack-20;
+    &__container {}
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(30);
+        @media (max-width:$mobile){
+            flex-direction: column; 
+
+        }
+    }
+    /* .bottom-footer__copy */
+    &__copy {
+        font-size: rem(14);
+    }
+
+    /* .bottom-footer__list */
+    &__list {
+        display: flex;
+        gap: rem(30);
+    }
+
+    /* .bottom-footer__item */
+    &__item {}
+
+    /* .bottom-footer__link */
+    &__link {
+        outline: none;
+        font-size: rem(14);
+        transition: all 0.5s ease 0s;
+        @media (any-hover: hover){
+            &:focus-visible{
+                color: $red;
+            }
+            &:hover{
+                color: $redLight;
+            }
+        }
+    }
+}
+
+//====================================================================================================
+
+//====================================================================================================
